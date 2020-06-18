@@ -1,0 +1,8 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.hola {
+    $primario: $hola;
+    $logo: $logo-hola;
+    @include revista($logo, $primario);
+}

@@ -1,0 +1,77 @@
+@import '../abstracts/variables';
+.com-nav-mobile {
+    position: fixed;
+    bottom: 0;
+    padding: $px-5 $px-10 $px-10;
+    background: $blanco;
+    z-index: 1500;
+    border-top: 1px solid $gris2;
+    width: 100%;
+    max-height: $px-60;
+    height: $px-60;
+    .row {
+        max-width: 390px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .item-foo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        //OCULTO HAMBURGUESA
+        // TODO: Recordar dejar oculto
+        p {
+            font-family: $font-arial;
+            font-size: $font-9;
+            color: $gris6;
+        }
+        &:hover {
+            p {
+                color: $ln;
+            }
+            i {
+                color: $ln;
+            }
+        }
+        &.--active {
+            p {
+                color: $ln;
+            }
+            i {
+                color: $ln;
+            }
+        }
+        &:first-child {
+            margin: -$px-5;
+        }
+    }
+    //scrollUp
+    &.--scrollDown {
+        bottom: -200px;
+    }
+    //scrollDown
+    &.--scrollUp {
+        bottom: 0;
+    }
+    /*@media ($media-l) {
+        display: none;
+    }*/ // en tablet landscape se ve mal sin esto
+}
+@media ($media-s) {
+    .com-nav-mobile {
+        height: inherit;
+        .item-foo {
+            p {
+                font-size: $font-11;
+            }
+        }
+    }
+}
+
+// // @media ($media-l) {
+// //     .com-nav-mobile {
+// //         display: none;
+// //     }
+// // }

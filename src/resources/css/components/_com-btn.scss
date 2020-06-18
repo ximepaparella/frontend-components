@@ -1,0 +1,81 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.com-btn {
+    font-family: $font-arial;
+    transition: opacity 0.2s ease-in-out;
+    @include flex(flex, row, center, center);
+    background: transparent;
+    .mod-user & {
+        .header & {
+            .amp & {
+                display: none;
+            }
+        }
+    }
+    &:focus {
+        outline: 0;
+    }
+    &.--small {
+        padding: $px-8 $px-12;
+    }
+    &.--primary {
+        background-color: $link;
+        border: 1px solid $link;
+        color: $blanco;
+    }
+    &.--secondary {
+        background-color: $blanco;
+        border: 1px solid $link;
+        color: $link;
+        padding: px(11) px(24);
+        text-transform: uppercase;
+        border-radius: px(3);
+        font-size: px(12);
+        font-weight: bold;
+        &:hover {
+            background-color: $link;
+            border: 1px solid $link;
+            color: $blanco;
+        }
+    }
+    &.--highlight {
+        background-color: $highlight;
+        border: 1px solid $gris3;
+        color: $negro;
+        &:hover {
+            background: $negro;
+            border-color: $negro;
+            color: $blanco;
+        }
+    }
+    &.--bright {
+        background-color: inherit;
+        border: 1px solid $blanco;
+        color: $blanco;
+    }
+    &:hover {
+        opacity: 0.8;
+        transition: opacity 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    i {
+        color: $negro;
+    }
+    .mod-nav & {
+        @include flex(flex, column, center, center);
+        font-size: px(11);
+        color: $negro;
+        text-align: center;
+    }
+}
+@media ($media-l) {
+    .com-btn {
+        .mod-user & {
+            .header & {
+                .amp & {
+                    display: none;
+                }
+            }
+        }
+    }
+}

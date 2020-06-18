@@ -1,0 +1,25 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.mod-unordered {
+    &.listuser {
+        position: relative;
+        background: #fff;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+        padding: px(10) 0;
+        &::before {
+            content: '';
+            width: px(10);
+            height: px(10);
+            background: $blanco;
+            position: absolute;
+            top: -#{px(7)};
+            left: calc(50% - 5px);
+            transform: rotate(45deg);
+            border-left: px(2) solid $gris1;
+            border-top: px(2) solid $gris1;
+        }
+    }
+    &.listfooter {
+        @include flex(flex, row, start, center);
+    }
+}

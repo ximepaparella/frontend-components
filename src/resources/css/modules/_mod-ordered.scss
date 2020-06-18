@@ -1,0 +1,11 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.mod-ordered {
+    @include flex(flex);
+    flex-wrap: wrap;
+    & .Listbreadcrumb {
+        .mod-breadcrumb & {
+            @include flex(inline, row, center, center);
+        }
+    }
+}

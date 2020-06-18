@@ -1,0 +1,46 @@
+@import '../abstracts/variables';
+
+.mod-caja-autorAcu {
+    border: 1px solid $gris3;
+    padding: 15px 20px;
+    position: relative;
+    &:before {
+        content: '';
+        width: 100px;
+        height: 3px;
+        background: #000;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+    }
+    & > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .com-title-section-autor {
+        text-align: center;
+    }
+    p {
+        font-size: 12px;
+        font-family: Arial;
+        color: #5a5a5a;
+        margin-bottom: 20px;
+    }
+    .mod-caja-autorAcu__figure {
+        width: 90px;
+        height: 90px;
+        overflow: hidden;
+        background: $gris3;
+        position: relative;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        img {
+            position: absolute;
+            top: 0;
+            max-width: 100%;
+        }
+    }
+}

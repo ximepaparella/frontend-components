@@ -1,0 +1,66 @@
+@import '../abstracts/variables';
+
+.noticia-storytelling {
+    main {
+        padding-top: 0;
+        .storytelling {
+            margin-top: -65px;
+            position: relative;
+            .cont-figure {
+                min-height: 520px;
+                @media (min-width: 768px) {
+                    min-height: initial;
+                }
+                > .figure {
+                    min-height: 520px;
+                    @media (min-width: 768px) {
+                        min-height: 728px;
+                    }
+                }
+            }
+            .com-epigrafe {
+                padding-top: $px-15;
+                @media (min-width: 1023px) {
+                    width: 140%;
+                }
+                @media (min-width: 1280px) {
+                    width: 150%;
+                }
+            }
+            .storytelling-title {
+                position: absolute;
+                bottom: $px-70;
+                margin-bottom: $px-50;
+                z-index: 1;
+                @media (min-width: 1023px) {
+                    width: 140%;
+                }
+                @media (min-width: 1280px) {
+                    width: 150%;
+                }
+                [class^='logo-'] {
+                    color: $blanco !important;
+                }
+                h1 {
+                    font-family: $font-SuecaSlab;
+                    font-size: $font-24;
+                    line-height: $line-24;
+                    color: $blanco;
+                    @media (min-width: 768px) {
+                        font-size: $font-46;
+                        line-height: $line-46;
+                    }
+                }
+            }
+            .sidebar__main {
+                overflow: visible;
+                .text:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
+        .cont-figure .figure .picture {
+            padding-top: initial;
+        }
+    }
+}

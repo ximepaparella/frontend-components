@@ -1,0 +1,26 @@
+@import '../abstracts/variables';
+//=========================
+// Hamburger
+//=========================
+.com-hamburger {
+    position: relative;
+    width: $px-40;
+    height: $px-32;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+
+    &:before {
+        content: 'Secciones';
+        position: absolute;
+        width: $px-60;
+        left: $px-42;
+        top: $px-10;
+        font-size: $font-12;
+    }
+    &:hover {
+        color: $link;
+    }
+}

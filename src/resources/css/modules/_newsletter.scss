@@ -1,0 +1,238 @@
+@import '../abstracts/variables';
+.mod-newsletter {
+    background: $link;
+    color: $blanco;
+    padding: 0 $px-15;
+    .col-12 {
+        p {
+            font-family: $font-arial;
+            font-size: $font-16;
+            line-height: $line-16;
+        }
+        &:nth-child(2) {
+            background-image: url('../../img/newsletter-lineas-trama-der.svg');
+            background-position: right top;
+            background-size: 40%;
+            background-repeat: no-repeat;
+            padding-bottom: $px-20;
+        }
+        &:nth-child(3) {
+            padding-top: 0;
+        }
+    }
+    h2 {
+        display: inline-block;
+        &.com-title-section-m {
+            font-weight: 600;
+        }
+    }
+    .com-input {
+        width: 100%;
+        + .--btn {
+            display: inline-block;
+        }
+    }
+    .--btn {
+        display: block;
+    }
+    &.lay-full-width .com-input {
+        width: 100%;
+    }
+    .com-breadcrumb {
+        display: block;
+        font-size: $font-16;
+        line-height: $line-16;
+        margin-bottom: 0;
+        a {
+            color: $blanco;
+            border-color: $blanco;
+            &:first-child {
+                color: $blanco;
+            }
+        }
+    }
+    .hlp-line {
+        padding-right: 0;
+        &:after {
+            display: none;
+        }
+    }
+    &.error {
+        label {
+            display: block;
+            width: fit-content;
+            border-radius: 3px;
+            background-color: #9d2827;
+            padding: 3px 6px;
+            font-family: $font-arial;
+            font-size: $font-12;
+            margin-top: $px-10;
+        }
+        .com-input {
+            border: 1px solid #9d2827;
+            background-image: url('../../img/x.svg');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            margin-bottom: $px-10;
+            &:after {
+                content: '\e912';
+                font-family: 'LNicons';
+                font-size: $font-14;
+                color: #9d2827;
+            }
+        }
+    }
+    p.check {
+        background-image: url('../../img/check.svg');
+        background-repeat: no-repeat;
+        text-indent: 30px;
+    }
+    label.check {
+        display: block;
+        width: fit-content;
+        border-radius: 3px;
+        background-color: $blanco;
+        color: $negro;
+        padding: 3px 6px;
+        font-family: $font-arial;
+        font-size: $font-16;
+    }
+    .sidebar__aside & {
+        &.error {
+            label {
+                margin-top: $px-10;
+            }
+        }
+        .col-tablet-2 {
+            display: none;
+        }
+        .col-12 {
+            width: 100%;
+            max-width: 100%;
+            flex: 0 0 100%;
+            &:nth-child(2) {
+                background-image: url('../../img/newsletter-lineas-trama-der.svg');
+                background-position: right top;
+                background-size: 50%;
+                padding: $px-30 $px-20 0;
+            }
+            &:nth-child(3) {
+                padding: 0 $px-20 $px-30;
+                .com-breadcrumb {
+                    font-size: $font-14;
+                    margin-top: $px-30;
+                    a {
+                        display: inline-block;
+                        margin-bottom: 0;
+                        color: $blanco;
+                        &:last-child {
+                            border-left: solid 1px $blanco;
+                            padding-left: $px-5;
+                            margin-left: $px-5;
+                        }
+                    }
+                }
+            }
+            h2:first-of-type {
+                margin-bottom: 0;
+            }
+            h2:last-of-type {
+                display: block;
+                margin-bottom: $px-30;
+            }
+            .com-input {
+                width: 100%;
+                margin-bottom: $px-10;
+            }
+            .--btn {
+                display: block;
+            }
+        }
+    }
+}
+
+//Valores de tablet para arriba
+@media (min-width: 768px) {
+    .mod-newsletter {
+        main & {
+            > .col-12:nth-child(2),
+            > .col-12:nth-child(3) {
+                padding-top: $px-45;
+                padding-bottom: $px-45;
+            }
+        }
+        padding: 0;
+        &.error {
+            label {
+                font-size: $font-14;
+                margin-top: 0;
+            }
+        }
+        &.lay-full-width .com-input {
+            width: calc(100% - 120px);
+        }
+        .--btn {
+            padding: $px-11 $px-25;
+        }
+        .hlp-line {
+            padding-right: $px-20;
+            &:after {
+                display: inline-block;
+            }
+        }
+        .col-12:nth-child(2) {
+            background-image: none;
+            padding-bottom: $px-30;
+        }
+        .col-12:nth-child(3) {
+            padding-top: $px-40;
+            padding-left: $px-20;
+            .com-breadcrumb {
+                display: block;
+                a {
+                    display: block;
+                    padding: 0;
+                    &:last-child {
+                        border: 0;
+                    }
+                }
+            }
+        }
+        > div {
+            background-repeat: no-repeat;
+            background-size: 100%;
+            &:first-child {
+                background-image: url('../../img/newsletter-lineas-trama-izq.svg');
+                background-position: left bottom;
+                background-size: 100%;
+            }
+            &:last-child {
+                background-image: url('../../img/newsletter-lineas-trama-der.svg');
+                background-position: right top;
+                background-size: 100%;
+            }
+        }
+    }
+}
+
+//Valores de desktop-sm para arriba
+@media (min-width: 1024px) {
+    .mod-newsletter {
+        padding: 0 $px-10;
+        > div:first-child,
+        > div:last-child {
+            background-size: 50%;
+        }
+    }
+}
+
+//Valores de desktop para arriba
+@media (min-width: 1280px) {
+    .mod-newsletter {
+        padding: initial;
+        .col-tablet-2 {
+            background-repeat: no-repeat;
+            background-size: 80%;
+        }
+    }
+}

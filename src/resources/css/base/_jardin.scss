@@ -1,0 +1,8 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.jardin {
+    $primario: $jardin;
+    $logo: $logo-jardin;
+    @include revista($logo, $primario);
+}

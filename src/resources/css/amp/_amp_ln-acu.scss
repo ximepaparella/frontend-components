@@ -1,0 +1,80 @@
+@import '../../../../../src/statics/LN/css/base/reset.scss';
+@import '../../../../../src/statics/LN/css/base/types.scss';
+
+//@import '../../../../../src/statics/LN/css/base/helpers.scss';
+
+@import '../../../../../src/statics/LN/css/layouts/gridAMP.scss';
+@import '../../../../../src/statics/LN/css/layouts/layout.scss';
+
+// TODO, REVISAR ESTOS ESTILOS MAS ADELANTE. EN ALGUNOS LADOS FUNCIONAN EN
+// EL COMPONENTE Y EN OTROS NO
+@import '../../../../../src/statics/LN/css/components/button.scss';
+@import '../../../../../src/statics/LN/css/components/share.scss';
+@import '../../../../../src/statics/LN/css/components/date.scss';
+@import '../../../../../src/statics/LN/css/components/tag.scss';
+@import '../../../../../src/statics/LN/css/components/author.scss';
+@import '../../../../../src/statics/LN/css/components/lead.scss';
+@import '../../../../../src/statics/LN/css/components/ordered.scss';
+@import '../../../../../src/statics/LN/css/components/unordered.scss';
+@import '../../../../../src/statics/LN/css/components/breadcrumb.scss';
+@import '../../../../../src/statics/LN/css/components/input.scss';
+@import '../../../../../src/statics/LN/css/components/blockquote.scss';
+@import '../../../../../src/statics/LN/css/components/text.scss';
+@import '../../../../../src/statics/LN/css/components/link.scss';
+@import '../../../../../src/statics/LN/css/components/subtitle.scss';
+@import '../../../../../src/statics/LN/css/components/title.scss';
+@import '../../../../../src/statics/LN/css/components/epigraph.scss';
+@import '../../../../../src/statics/LN/css/components/appointment.scss';
+//@import '../../../../../src/statics/LN/css/components/footer.scss';
+@import '../../../../../src/statics/LN/css/base/aspect-ratios.scss';
+@import '../../../../../src/statics/LN/css/components/nav-amp.scss';
+@import '../../../../../src/statics/LN/css/components/banners.scss';
+@import '../../../../../src/statics/LN/css/modules/caja-nota.scss';
+//@import '../../../../../src/statics/LN/css/components/colecciones.scss';
+//@import '../../../../../src/statics/LN/css/components/carta-lectores.scss';
+//@import '../../../../../src/statics/LN/css/components/dropdown.scss';
+//@import '../../../../../src/statics/LN/css/modules/newsletter.scss';
+
+// ----------------------------NUEVO FOOTER -----------------------------//
+
+@import '../../../../../src/statics/LN/css/modules/sec-header';
+@import '../../../../../src/statics/LN/css/modules/sec-body';
+@import '../../../../../src/statics/LN/css/modules/sec-footer';
+//-----------------------------------------------------------------------//
+@import '../../../../../src/statics/LN/css/modules/mod-app';
+@import '../../../../../src/statics/LN/css/modules/mod-copyright';
+@import '../../../../../src/statics/LN/css/modules/mod-fiscal';
+@import '../../../../../src/statics/LN/css/modules/mod-link';
+@import '../../../../../src/statics/LN/css/modules/mod-logo';
+@import '../../../../../src/statics/LN/css/modules/mod-recaptcha';
+@import '../../../../../src/statics/LN/css/modules/mod-share';
+@import '../../../../../src/statics/LN/css/modules/mod-unordered';
+@import '../../../../../src/statics/LN/css/modules/mod-user';
+//-----------------------------------------------------------------------//
+@import '../../../../../src/statics/LN/css/components/com-icon';
+@import '../../../../../src/statics/LN/css/components/com-li';
+@import '../../../../../src/statics/LN/css/components/com-line';
+@import '../../../../../src/statics/LN/css/components/com-link';
+@import '../../../../../src/statics/LN/css/components/com-svg';
+@import '../../../../../src/statics/LN/css/components/com-text';
+
+// ----------------------------NUEVO NAVBAR -----------------------------//
+
+@import '../../../../../src/statics/LN/css/modules/mod-nav';
+//-----------------------------------------------------------------------//
+@import '../../../../../src/statics/LN/css/components/com-btn';
+
+// ----------------------------NUEVO BREADCRUMB -----------------------------//
+
+@import '../../../../../src/statics/LN/css/modules/mod-ordered';
+@import '../../../../../src/statics/LN/css/modules/mod-breadcrumb';
+
+// ----------------------------NUEVO TITLE -----------------------------//
+@import '../../../../../src/statics/LN/css/modules/mod-title';
+@import '../../../../../src/statics/LN/css/components/com-title';
+
+// ----------------------------NUEVO PARAGRAPH -----------------------------//
+@import '../../../../../src/statics/LN/css/modules/mod-paragraph';
+@import '../../../../../src/statics/LN/css/components/com-paragraph';
+
+@import '../../../../../src/statics/LN/css/base/helpers-amp.scss'; //se usan solo los helpers necesarios

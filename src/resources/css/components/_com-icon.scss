@@ -1,0 +1,40 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.com-icon {
+    @include flex(flex, row, center, center);
+
+    .footer .--share & {
+        display: inline-flex;
+        color: $negro;
+
+        i {
+            margin-right: px(20);
+            @media (max-width: 1023px) {
+                margin: px(10);
+            }
+        }
+    }
+    .mod-nav & {
+        @include flex(flex, column, center, center);
+        font-size: px(11);
+        color: $negro;
+        text-align: center;
+        text-transform: initial;
+    }
+}
+@media ($media-l) {
+    .com-icon {
+        .footer .--share & {
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        .footer .--logo & {
+            i {
+                &:before {
+                    font-size: px(25);
+                }
+            }
+        }
+    }
+}

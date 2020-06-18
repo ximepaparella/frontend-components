@@ -1,0 +1,17 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.mod-copyright {
+    .footer & {
+        @include flex(flex, row, center, center);
+        order: 2;
+    }
+}
+@media ($media-l) {
+    .mod-copyright {
+        .footer & {
+            order: 1;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+}

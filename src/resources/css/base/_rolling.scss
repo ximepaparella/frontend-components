@@ -1,0 +1,19 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.rolling {
+    $primario: $blanco;
+    $logo: $logo-rolling;
+    @include revista($logo, $primario);
+    .subheader-acu .com-link,
+    &.acu-revista .subheader-acu .com-share a i {
+        color: $negro;
+    }
+    .cont-figure .figure .content-pic:before,
+    &.acu-revista .subheader-acu i.logo-revista {
+        color: $rolling;
+    }
+    .header {
+        @include headerBlanco;
+    }
+}

@@ -1,0 +1,66 @@
+@import '../abstracts/variables';
+.com-link {
+    /*text-transform: uppercase;
+    font-family: $font-arial;
+    font-size: $font-12;*/
+    color: $link;
+    &.--small {
+        font-size: $font-14;
+        text-transform: initial;
+    }
+    &.--inline {
+        display: inline-block;
+        text-transform: initial;
+        font-size: $font-16;
+        line-height: $px-23;
+    }
+}
+.element-paragraph a {
+    color: $link;
+}
+.link {
+    font-family: $font-arial;
+    font-size: $font-12;
+    color: $link;
+    p & {
+        font-size: $font-16;
+    }
+    .keep-reading & {
+        display: block;
+        font-size: $font-16;
+        line-height: $line-16;
+        margin-bottom: $px-10;
+        @media (min-width: 768px) {
+            margin-bottom: $px-16;
+        }
+    }
+    .--small {
+        font-size: $font-14;
+        text-transform: initial;
+    }
+    .opinion-calc & {
+        font-size: $font-14;
+        @media (min-width: 768px) {
+            font-size: $font-16;
+        }
+    }
+}
+
+.keep-reading {
+    margin-bottom: $px-32;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        opacity: 0.8;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    .com-ordered &,
+    .com-unordered & {
+        color: $link;
+    }
+}

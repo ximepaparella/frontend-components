@@ -1,0 +1,20 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.mod-app {
+    display: flex;
+}
+.--apps {
+    .footer & {
+        @include flex(flex, row, center, center);
+        order: 4;
+        margin-bottom: px(24);
+    }
+}
+@media ($media-l) {
+    .--apps {
+        .footer & {
+            @include flex(flex, row, end, center);
+            margin-bottom: 0;
+        }
+    }
+}

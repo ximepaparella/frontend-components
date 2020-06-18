@@ -1,0 +1,165 @@
+@import '../abstracts/variables';
+.com-tag {
+    margin-bottom: $px-32;
+    a {
+        font-family: $font-arial;
+        font-size: $font-12;
+        padding: $px-6 $px-11;
+        border: $px-1 solid;
+        border-radius: $px-3;
+        margin-right: $px-10;
+        margin-bottom: $px-10;
+        text-transform: uppercase;
+        display: inline-block;
+        border-color: $link;
+        color: $link;
+        &:hover {
+            background: $link;
+            color: $blanco;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+
+.com-secondary-tag {
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-top: $px-10;
+    p {
+        display: inline-flex;
+        font-family: $font-arial;
+        color: $gris5;
+    }
+    a {
+        font-family: $font-arial;
+        font-size: $font-14;
+        margin-right: $px-17;
+        display: inline-block;
+        position: relative;
+        color: $link;
+        margin-bottom: $px-12;
+        &:after {
+            content: '·';
+            display: inline-block;
+            position: absolute;
+            color: $link;
+            right: -$px-14;
+            font-size: $font-25;
+            line-height: $px-15;
+        }
+        &:last-of-type:after {
+            display: none;
+        }
+    }
+    //Valores de tablet para arriba
+    @media (min-width: 768px) {
+        white-space: initial;
+        overflow-x: initial;
+    }
+    .com-titleWithfollow & {
+        li {
+            display: inline;
+            a:after {
+                content: '·';
+                display: inline-block;
+                position: absolute;
+                color: $link;
+                right: -$px-14;
+                font-size: $font-25;
+                line-height: $px-15;
+            }
+            &:last-of-type a:after {
+                display: none;
+            }
+        }
+    }
+}
+
+.with-category {
+    width: 100%;
+    border-bottom: 1px solid $gris3;
+    margin-bottom: $px-20;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .com-title-section-xl {
+        text-decoration: none;
+        margin-right: $px-30;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+    .arrow {
+        &.hlp-none {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            display: block;
+            background: none;
+            position: relative;
+            margin: 0 $px-10;
+            &.left-paddle {
+                margin-left: 0;
+            }
+            i {
+                font-size: $px-20;
+                color: $link;
+            }
+            &:after {
+                content: '';
+                transform: rotate(-45deg);
+                width: $px-6;
+                height: $px-6;
+                background: $link;
+                display: none;
+                position: absolute;
+                top: $px-4;
+                left: $px-5;
+            }
+            &:before {
+                content: 'MÁS CATEGORÍAS';
+                font-size: $px-9;
+                font-weight: 700;
+                width: $px-100;
+                background: $link;
+                color: $blanco;
+                padding: $px-4 0;
+                position: absolute;
+                top: -10px;
+                left: -45px;
+                display: none;
+            }
+            &:hover:before,
+            &:hover:after {
+                display: block;
+            }
+        }
+    }
+    .com-category {
+        display: none;
+        @media (min-width: 768px) {
+            width: 100%;
+            overflow-x: hidden;
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            li {
+                padding-right: $px-20;
+                padding-bottom: 1px;
+                display: inline-flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                a {
+                    font-family: $font-SuecaSlab;
+                    font-size: $font-18;
+                    font-weight: 500;
+                    line-height: $line-19;
+                    letter-spacing: -0.32px;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,138 @@
+@import '../abstracts/variables';
+html {
+    height: 100%;
+}
+
+body {
+    @media (min-width: 1023px) {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.error404 {
+    margin: 0 auto;
+    background: url(https://www.lanacion.com.ar/error/liniers-vertical.jpg)
+        no-repeat;
+    height: 100vh;
+    background-position: bottom 130px right 0px;
+    background-size: 90%;
+    margin: 0;
+    @media (min-width: 450px) {
+        background-size: auto;
+    }
+    @media (min-width: 1023px) {
+        background: none;
+        height: auto;
+    }
+    header {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px 0;
+        .row {
+            .header__middle__logo .logo-la-nacion {
+                color: #006998;
+                margin-bottom: 30px;
+                font-size: 17px;
+                @media (min-width: 1023px) {
+                    font-size: 29px;
+                }
+            }
+            @media (min-width: 1023px) {
+                > div:first-child {
+                    text-align: right;
+                    border-right: 1px solid #d9d9d9;
+                    padding: 5px 30px 0 0;
+                }
+                > div:last-child {
+                    padding: 10px 0 15px 30px;
+                }
+            }
+            nav {
+                margin-top: 30px;
+                a {
+                    color: $link;
+                    &:first-child {
+                        margin-right: 15px;
+                    }
+                    &:last-child {
+                        display: block;
+                        margin-top: 20px;
+                    }
+                    @media (min-width: 1023px) {
+                        &:first-child {
+                            margin-right: 30px;
+                        }
+                        &:last-child {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+            h1 {
+                font-family: Suecaslab;
+                font-size: 24px;
+                line-height: 40px;
+                margin-top: -15px;
+            }
+            p {
+                line-height: 30px;
+                font-size: 16px;
+                font-family: Arial;
+                @media (min-width: 1023px) {
+                    font-size: 19px;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                }
+            }
+        }
+    }
+    main {
+        padding: 20px 0 0;
+        img {
+            //display: none;
+            visibility: hidden;
+            margin: 0 auto;
+            width: 100%;
+            @media (min-width: 1023px) {
+                //display: block;
+                visibility: visible;
+            }
+        }
+    }
+    footer {
+        font-size: 14px;
+        line-height: 24px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        @media (min-width: 1023px) {
+            position: relative;
+            bottom: auto;
+        }
+        .row {
+            padding: 20px 0;
+            .footer-copyright__reserved {
+                color: #5e5e5e;
+                @media (min-width: 1023px) {
+                    order: 1;
+                }
+            }
+            .footer-humor {
+                border-bottom: 1px solid #c9c9c9;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                @media (min-width: 1023px) {
+                    text-align: right;
+                    order: 2;
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                }
+                a {
+                    color: $link;
+                }
+            }
+        }
+    }
+}

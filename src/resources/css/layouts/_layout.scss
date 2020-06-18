@@ -1,0 +1,79 @@
+@import '../abstracts/variables';
+
+//=======================================
+// lay CON ASIDE
+//=======================================
+.lay-sidebar {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-bottom: $px-40;
+}
+
+@media ($media-l) {
+    .lay-sidebar {
+        flex-direction: row;
+    }
+    .sidebar__main {
+        flex-basis: 100%;
+        margin-right: $px-40;
+        //por slider
+        //overflow: hidden;
+    }
+    .sidebar__aside {
+        flex-basis: $px-300;
+        flex-shrink: 0;
+    }
+}
+
+@media ($media-lg) {
+    #wrapper.nota .sidebar__main {
+        margin-right: $px-80;
+    }
+}
+
+//=======================================
+// lay al 100%
+//=======================================
+[class^='lay'],
+[class*=' lay'] {
+    width: 100%;
+    padding-right: $px-10;
+    padding-left: $px-10;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media ($media-s) {
+    [class^='lay'],
+    [class*=' lay'] {
+        padding-right: $px-20;
+        padding-left: $px-20;
+    }
+}
+
+@media ($media-m) {
+    [class^='lay'],
+    [class*=' lay'] {
+        padding-right: $px-30;
+        padding-left: $px-30;
+    }
+}
+
+@media ($media-l) {
+    [class^='lay'],
+    [class*=' lay'] {
+        max-width: 1340px;
+        padding-right: $px-40;
+        padding-left: $px-40;
+    }
+}
+
+//=======================================
+// lay al 100% sin paddings ni margins
+//=======================================
+.lay-full-width {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+}

@@ -1,0 +1,30 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.mod-nav {
+    &.--mobile {
+        @include flex(flex, row, center, center);
+        position: fixed;
+        bottom: 0;
+        background: #ffffff;
+        z-index: 1500;
+        border-top: 1px solid #d9d9d9;
+        width: 100%;
+        transition: all 0.2s ease-in-out;
+        padding: px(5) 0 px(10);
+        .row {
+            max-width: 390px;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+    }
+    * {
+        @include flex(flex, row, center, center);
+    }
+}
+@media ($media-l) {
+    .mod-nav {
+        &.--mobile {
+            display: none;
+        }
+    }
+}

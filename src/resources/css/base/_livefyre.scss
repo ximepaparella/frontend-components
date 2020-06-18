@@ -1,0 +1,1015 @@
+/* no logueado */
+
+section {
+    &.comments.no-logueado {
+        .fyre-editor-container,
+        .fyre-comment-reply {
+            display: none;
+        }
+    }
+
+    &#comunidad .recordar-logueo {
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        background-color: #ffffbf;
+        padding: 20px 15px;
+        font-family: arial;
+        margin-top: 20px;
+        font-weight: normal;
+        text-align: center;
+        line-height: 20px;
+    }
+}
+
+.fyre a {
+    color: #0075c4;
+}
+
+.fyre-editor .fyre-editor-container .fyre-editor-editable {
+    background-color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #dadada;
+    border-radius: 0;
+
+    p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    > p {
+        * {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    }
+}
+
+.fyre {
+    .fyre-editor-locked {
+        display: none;
+    }
+
+    .fyre-box-wrapper a.fyre-user-profile-link {
+        width: 100%;
+        margin-left: 7px;
+    }
+}
+
+a.fyre-user-profile-link.fyre-user-loggedin {
+    background: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: none;
+}
+
+.fyre .fyre-login-bar a {
+    font-family: 'Arial';
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    width: 97px;
+    border: 1px solid #0074c4;
+    background-color: #fff;
+    color: #0074c4;
+    margin: 0;
+    padding: 10px 5px;
+    font-weight: normal;
+    text-align: center;
+
+    &:hover {
+        background-color: #0074c4;
+        color: #fff;
+        opacity: 0.7;
+    }
+}
+
+/* cuerpo texto editor */
+
+.fyre-editor .fyre-editor-container .fyre-editor-editable > p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+}
+
+.fyre {
+    .fyre-stream-stats {
+        span {
+            color: #000;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        color: #000;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .fyre-stream-livecount {
+        color: #000;
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #9a9a9a;
+        font-weight: normal;
+    }
+}
+
+.fyre-editor .fyre-editor-toolbar {
+    .goog-toolbar > div {
+        &.goog-toolbar-separator {
+            background: transparent;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+            border-bottom: 0;
+        }
+
+        background: #858a9a;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        border-bottom: 0;
+        border-right: 1px solid #fff;
+        background-image: none;
+        filter: none;
+
+        &:hover {
+            background: #797d8c;
+        }
+
+        &.fyre-format-button > div,
+        &.fyre-button-left:nth-child(2) {
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+        }
+
+        &:hover {
+            background: none;
+        }
+    }
+
+    margin-top: 3px;
+    z-index: 0;
+}
+
+/*botones*/
+
+.fyre-editor-toolbar .goog-toolbar > div {
+    &.fyre-button-left {
+        &:first-child {
+            background: #858a9a;
+            border: 0;
+            border-right: 3px solid #fff;
+            color: #fff;
+            background-image: none;
+            filter: none;
+        }
+
+        background: #858a9a;
+        border: 0;
+        border-right: 3px solid #fff;
+        color: #fff;
+        background-image: none;
+        filter: none;
+    }
+
+    &.fyre-button-right {
+        background: #858a9a;
+        border: 0;
+        border-right: 3px solid #fff;
+        color: #fff;
+        background-image: none;
+        filter: none;
+    }
+}
+
+.fyre-editor
+    .fyre-editor-toolbar
+    .goog-toolbar
+    > div.fyre-button-left:nth-child(2) {
+    background: #858a9a;
+    border: 0;
+    border-right: 3px solid #fff;
+    color: #fff;
+    background-image: none;
+    filter: none;
+}
+
+.fyre-editor-toolbar .goog-toolbar > div {
+    &.fyre-button-left {
+        &:first-child:hover,
+        &:hover,
+        &:first-child:hover {
+            background: #797d8c;
+            color: #fff;
+            background-image: none;
+            filter: none;
+        }
+    }
+
+    &.fyre-button-right:hover {
+        background: #797d8c;
+        color: #fff;
+        background-image: none;
+        filter: none;
+    }
+}
+
+.fyre-editor
+    .fyre-editor-toolbar
+    .goog-toolbar
+    > div.fyre-button-left:nth-child(2):hover {
+    background: #797d8c;
+    color: #fff;
+    background-image: none;
+    filter: none;
+}
+
+.fyre-editor-toolbar
+    .goog-toolbar
+    > div.fyre-post-button
+    .fyre-button-right-inner-box,
+.fyre-follow-button .fyre-button-left-inner-box,
+.fyre-share-button,
+.fyre-embed-button,
+.fyre-raw-button {
+    text-shadow: none !important;
+    color: #fff !important;
+}
+
+.fyre-editor-toolbar .goog-toolbar > div {
+    &.fyre-button-left-hover,
+    &.fyre-button-right-hover {
+        background: #797d8c;
+        background-color: #797d8c !important;
+        color: #fff;
+        background-image: none;
+        filter: none !important;
+    }
+}
+
+.fyre-editor .fyre-editor-toolbar .goog-toolbar > div {
+    &.fyre-button-left-hover {
+        background: #797d8c;
+        background-color: #797d8c !important;
+        color: #fff;
+        background-image: none;
+        filter: none !important;
+    }
+
+    filter: none !important;
+    color: #fff !important;
+    background-image: none !important;
+
+    &.fyre-format-button {
+        > div {
+            background: url('https://contenidos.lanacion.com.ar/_ui/desktop/imgs/layout/fondos/livefyre-sprite-0.png')
+                no-repeat scroll 8px -74px transparent;
+
+            &:hover {
+                background: url('https://contenidos.lanacion.com.ar/_ui/desktop/imgs/layout/fondos/livefyre-sprite-0.png')
+                    no-repeat scroll 8px -74px transparent;
+            }
+        }
+
+        &.fyre-button-left-open > div {
+            background: url('https://contenidos.lanacion.com.ar/_ui/desktop/imgs/layout/fondos/livefyre-sprite-0.png')
+                no-repeat scroll 8px -74px transparent;
+            background-color: #636879;
+        }
+    }
+}
+
+/* botÃ³n editar */
+
+.fyre-mention-menu {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+
+.fyre-editor .fyre-editor-toolbar {
+    .fyre-format-toolbar,
+    .fyre-share-container {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0;
+    }
+
+    .goog-toolbar > div.fyre-mention-button {
+        > div {
+            background: url('https://contenidos.lanacion.com.ar/_ui/desktop/imgs/layout/fondos/livefyre-sprite-0.png')
+                no-repeat scroll 8px -103px transparent;
+        }
+
+        &.fyre-button-left-open > div {
+            background: url('https://contenidos.lanacion.com.ar/_ui/desktop/imgs/layout/fondos/livefyre-sprite-0.png')
+                no-repeat scroll 8px -103px #636879;
+        }
+    }
+}
+
+/* botÃ³n @twitter */
+
+.fyre-mention-menu .fyre-mention-item span {
+    background: url('https://contenidos.lanacion.com.ar/_ui/desktop/imgs/layout/fondos/livefyre-sprite-0.png')
+        no-repeat scroll 0 -215px;
+}
+
+/* botÃ³n comentÃ¡ */
+
+.fyre-editor {
+    .fyre-editor-toolbar {
+        .goog-toolbar > div {
+            &.fyre-button-right.fyre-post-button {
+                -moz-border-radius: 0;
+                -webkit-border-radius: 0;
+                border-radius: 0;
+                font: 14px/20px arial, sans-serif;
+                background: #636879;
+                border: 0;
+                color: #fff;
+                background-image: none;
+                filter: none;
+
+                &:hover {
+                    background: #797d8c;
+                    color: #fff;
+                    background-image: none;
+                    filter: none;
+                }
+            }
+
+            &.fyre-media-button,
+            &.fyre-embed-button {
+                display: none;
+            }
+
+            &.fyre-button-right {
+                border-left: 0;
+                border-right: 3px solid #fff;
+                width: 106px;
+
+                &.fyre-cancel-button {
+                    width: 76px;
+                }
+            }
+        }
+
+        .fyre-share-button {
+            div.fyre-button-right-inner-box {
+                background: url('https://contenidos.lanacion.com.ar/_ui/desktop/imgs/layout/fondos/livefyre-sprite-0.png')
+                    no-repeat scroll 88px -160px transparent;
+                padding: 0 0 0 28px;
+            }
+
+            &.fyre-button-left-open div.fyre-button-right-inner-box,
+            &.fyre-button-right-active div.fyre-button-right-inner-box {
+                color: #fff;
+                background: url('https://contenidos.lanacion.com.ar/_ui/desktop/imgs/layout/fondos/livefyre-sprite-0.png')
+                    no-repeat scroll 88px -160px #636879;
+            }
+
+            label.fyre-share-counter,
+            &.fyre-button-left-open label.fyre-share-counter {
+                background: url('https://contenidos.lanacion.com.ar/_ui/desktop/imgs/layout/fondos/livefyre-sprite-0.png')
+                    no-repeat scroll 0 -275px transparent;
+                padding-left: 0;
+            }
+
+            label.fyre-share-counter.fyre-share-empty,
+            &.fyre-button-left-open label.fyre-share-counter.fyre-share-empty,
+            &.fyre-button-right-active
+                label.fyre-share-counter.fyre-share-empty {
+                background: url('https://contenidos.lanacion.com.ar/_ui/desktop/imgs/layout/fondos/livefyre-sprite-0.png')
+                    no-repeat scroll 5px -251px transparent;
+            }
+        }
+    }
+
+    .fyre-editor-container .fyre-editor-editable.editable {
+        color: #4d4d4d;
+        margin-bottom: 12px;
+    }
+}
+
+/* botÃ³n subir imagen */
+
+/* botÃ³n compartir*/
+
+/* botÃ³n cancelar*/
+
+/* comments */
+
+.fyre {
+    .fyre-comment-article,
+    .fyre-comment-stream {
+        font-size: 14px;
+        line-height: 20px;
+        font-family: Arial;
+    }
+
+    .fyre-comment-wrapper time.fyre-comment-date {
+        font: normal 12px/14px Arial, sans-serif;
+        color: #8d8d8d;
+    }
+
+    .fyre-comment-divider {
+        margin: 0px 0 18px 0;
+    }
+
+    .fyre-moderator,
+    .fyre-comment-author-tag {
+        background-color: #a3a7b3;
+    }
+
+    .fyre-comment {
+        p {
+            margin-right: 60px;
+
+            em {
+                font-style: italic !important;
+            }
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        a {
+            font-weight: normal;
+            text-decoration: underline;
+        }
+    }
+
+    .fyre-stream-sort {
+        margin: 30px 0 30px 0;
+        border-bottom: 1px solid #dadada;
+        padding-top: 30px;
+
+        a {
+            color: #0075c4 !important;
+            font: normal 14px/20px Arial, sans-serif;
+            padding-right: 20px;
+        }
+    }
+}
+
+/* ordenar por */
+
+.fyre-stream-sort-bar {
+    display: none;
+}
+
+/* like y responder */
+
+.fyre {
+    .fyre-comment-like-count {
+        color: #696e80;
+        font-size: 16px;
+    }
+
+    .fyre-comment-like-btn {
+        font-size: 14px;
+        font-weight: bold;
+
+        &:hover {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+
+    .fyre-comment-reply {
+        font-size: 14px;
+        margin-left: 10px;
+        font-weight: bold;
+
+        &:hover {
+            font-size: 14px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    }
+
+    .fyre-comment-actions {
+        font: 12px/14px Arial, sans-serif;
+        -webkit-opacity: 1;
+        -khtml-opacity: 1;
+        -moz-opacity: 1;
+        -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+        filter: alpha(opacity = 100);
+        opacity: 1;
+    }
+
+    .fyre-comment-like-imgs {
+        margin: 0 4px;
+    }
+
+    .fyre-avatar img {
+        width: 18px;
+        height: 18px;
+        margin: 0 2px;
+    }
+
+    .fyre-comment-like {
+        left: -8px;
+    }
+
+    .fyre-comment-reply {
+        left: -7px;
+
+        &:hover {
+            left: -7px;
+        }
+    }
+
+    .fyre-comment a.fyre-comment-edit {
+        font-weight: bold;
+    }
+
+    .fyre-comment-actions a {
+        &.fyre-flag-link > span,
+        > span {
+            display: none;
+        }
+
+        color: #929292;
+    }
+
+    .fyre-comment-wrapper:hover
+        > .fyre-comment-footer
+        > .fyre-comment-actions
+        fyre-share-link
+        span {
+        background-image: none;
+        width: 1px;
+    }
+
+    .fyre-comment-divider > span.fyre-comment-reply-wrapper {
+        color: #335577;
+        font-size: 12px;
+        background-color: #fff;
+        padding-right: 5px;
+    }
+
+    .fyre-stream-more {
+        background: url('https://contenidos.lanacion.com.ar/_ui/desktop/imgs/layout/fondos/livefyre-sprite-0.png')
+            0 -178px transparent;
+
+        .fyre-stream-more-container {
+            background: none;
+            background-color: #858a9a;
+            color: #fff;
+            border: 0;
+            filter: none;
+
+            &:hover {
+                background-color: #797d8c;
+                filter: none;
+                cursor: pointer;
+            }
+
+            .fyre-text {
+                color: #fff;
+                font: bold 14px/30px Arial, sans-serif;
+            }
+        }
+    }
+
+    .fyre-box-list {
+        .fyre-edit-profile-link,
+        .fyre-logout-link {
+            display: none;
+        }
+    }
+
+    .fyre-box-wrapper span.fyre-user-drop {
+        display: none;
+    }
+
+    .fyre-user-loggedout {
+        color: #335577;
+    }
+}
+
+/* editar */
+
+/* reportar */
+
+/*compartir*/
+
+/* mostrar respuestas */
+
+/* ver mÃ¡s comments */
+
+/* perfil */
+
+/* error */
+
+.fyre-editor-error {
+    background-color: #9d2829;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #a42821;
+    color: #ffffff;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    background-image: none;
+    filter: none;
+    text-shadow: none;
+}
+
+.fyre {
+    .fyre-comment-actions a.fyre-delete-link {
+        color: #9d2829;
+    }
+
+    .fyre-moderator,
+    .fyre-comment-author-tag {
+        font-size: 12px;
+        padding: 1px 5px;
+    }
+
+    .fyre-comment-tag {
+        font-size: 12px;
+
+        &.fyre-featured {
+            padding: 1px 5px;
+        }
+    }
+
+    .fyre-moderator {
+        display: none;
+    }
+
+    .fyre-comment-deleted p {
+        color: #9d2829;
+        margin-bottom: 15px;
+    }
+}
+
+/* chapitas */
+
+/* comentario borrado */
+
+/* encabezado comments */
+
+.encabezado-comments {
+    background: url('https://contenidos.lanacion.com.ar/_ui/desktop/imgs/layout/fondos/enviar-comentario.png')
+        no-repeat 0 5px;
+    padding-left: 140px;
+    min-height: 75px;
+    font: normal 12px/17px arial, sans-serif;
+
+    a {
+        color: #335577;
+
+        &:hover,
+        &:visited {
+            color: #335577;
+        }
+    }
+
+    .tutorial-comments {
+        float: right;
+        margin-left: 5px;
+        display: none;
+    }
+}
+
+/* mensaje-migracion */
+
+.mensaje-migracion {
+    border: 1px solid #dadada;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #9d2829;
+}
+
+/* alertas */
+
+.fyre-modal-alert {
+    &.fyre-modal-alert-green,
+    &.fyre-modal-alert-black {
+        background-color: #9d2829;
+        background-image: none;
+        border: 1px solid #9d2829;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none;
+        filter: none;
+        text-shadow: none;
+    }
+}
+
+.fyre {
+    .fyre-editor-disabled {
+        border: none;
+        padding: 20px 0px;
+        font-size: 14px;
+        line-height: 16px;
+        font-style: normal;
+        font-weight: normal;
+        margin-bottom: 20px;
+        color: #000;
+        background: #ffffbf;
+        border-radius: 0;
+        font-weight: normal;
+        height: auto;
+        text-align: center;
+    }
+
+    .fyre-archive-stream-header .fyre-archive-stream-sort {
+        display: none;
+    }
+}
+
+/* Alertas nuevo comentario */
+
+.fyre-notifier-message,
+.fyre-notifier-message-container {
+    background: #fff;
+    filter: none;
+}
+
+.fyre-notifier-counter.blue {
+    background: #982728 !important;
+    border: none;
+    text-shadow: none;
+    filter: none;
+}
+
+.fyre-notifier-banner {
+    box-shadow: none;
+    background: #fff;
+    filter: none;
+}
+
+.fyre-notifier-container {
+    background: #fff;
+    z-index: 55000;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    filter: none;
+}
+
+.fyre-notifier-base-shadow {
+    background: #fff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    bottom: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    background-image: none;
+    padding: 0;
+    filter: none;
+}
+
+.fyre-notifier-base {
+    background: #fff;
+    border-radius: 0;
+    filter: none;
+}
+
+.fyre-notifier-avatar-shading {
+    border: 1px solid #dadada;
+    border-radius: 0;
+}
+
+/* nombre usuario */
+
+.fyre-hovercard-display-name,
+.fyre-hovercard-username {
+    display: none !important;
+}
+
+/* modales */
+
+.fyre-modal {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+
+    .fyre-modal-header,
+    .fyre-modal-title {
+        color: #249ea8;
+    }
+
+    .fyre-modal-buttons > button {
+        background: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        border-radius: 0;
+        border: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none;
+        background-color: #858a9a;
+        color: #fff;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #797d8c;
+        }
+    }
+
+    .fyre-modal-textfield {
+        font: 12px/16px arial, sans-serif;
+        border-radius: 0;
+        border: 1px solid #b2b2b2;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .fyre-modal-close,
+    .fyre-modal-title-close {
+        right: 10px;
+        left: auto;
+    }
+}
+
+/* Hide the top logo */
+
+.fyre-widget {
+    .fyre-logo-drop,
+    .fyre-logo-help,
+    .fyre-help {
+        display: none !important;
+    }
+}
+
+/* Style the bottom logo */
+
+#powered_by_livefyre_new {
+    a {
+        background: url('https://zor.livefyre.com/wjs/v1.0/images/icons/poweredbylivefyre.png')
+            no-repeat left top;
+        display: block;
+        height: 24px;
+        font: 13px 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+        text-decoration: none;
+        color: #404040;
+        padding-left: 28px;
+        padding-top: 4px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    padding-top: 10px;
+}
+
+.fyre {
+    .fyre-comment-footer {
+        margin: 14px -10px 7px 64px;
+        float: none;
+    }
+
+    .fyre-login-bar a {
+        font-family: 'Arial';
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 11px;
+        width: 97px;
+        border: 1px solid #0074c4;
+        background-color: #fff !important;
+        color: #0074c4 !important;
+        margin: 0;
+        padding: 10px 5px;
+        font-weight: normal;
+        text-align: center;
+
+        &:hover {
+            background-color: #0074c4 !important;
+            color: #fff !important;
+            opacity: 0.7;
+        }
+    }
+}
+
+footer#pie {
+    padding: 0 20px !important;
+}
+
+/* Avatares */
+
+.fyre .fyre-comment-user img.fyre-user-avatar {
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
+}
+
+/********************************** no print ******************************/
+@media print {
+    section#comunidad {
+        display: none !important;
+    }
+}
+
+/********************************* celus y tabletas ***********************/
+@media screen and (min-width: 100px) and (max-width: 1000px) {
+    .fyre .fyre-login-bar a {
+        font-family: 'Arial';
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 11px;
+        width: 97px;
+        border: 1px solid #0074c4;
+        background-color: #fff;
+        color: #0074c4;
+        margin: 0;
+        padding: 10px 5px;
+        font-weight: normal;
+        text-align: center;
+
+        &:hover {
+            background-color: #0074c4;
+            color: #fff;
+            opacity: 0.7;
+        }
+    }
+
+    section#comunidad {
+        width: auto !important;
+        padding: 0 0px 30px 0px;
+    }
+
+    .fyre .fyre-comment p {
+        margin-right: 20px;
+    }
+}
+
+/********************************* celus ********************************/
+@media screen and (min-width: 100px) and (max-width: 640px) {
+    .encabezado-comments .tutorial-comments {
+        display: none;
+    }
+
+    .fyre {
+        .fyre-comment-actions {
+            display: none;
+        }
+
+        .fyre-comment-reply {
+            font-size: 12px;
+
+            &:hover {
+                font-size: 12px;
+            }
+        }
+
+        .fyre-stream-stats span {
+            font-size: 14px;
+        }
+
+        .fyre-comment-action-button,
+        a.fyre-mobile-action-button {
+            height: 30px !important;
+        }
+    }
+}

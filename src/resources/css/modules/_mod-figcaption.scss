@@ -1,0 +1,33 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.mod-figcaption {
+    display: block;
+    padding-bottom: px(8);
+    .--caption {
+        display: block;
+        padding-top: px(8);
+        line-height: px(24);
+        &:empty {
+            display: none;
+        }
+    }
+    .--credit {
+        display: block;
+        color: #6e6e6e;
+        font-size: px(15);
+        padding-top: px(8);
+        &:empty {
+            display: none;
+        }
+    }
+    .--zoom & {
+        &.--active {
+            color: $blanco;
+            bottom: px(32);
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

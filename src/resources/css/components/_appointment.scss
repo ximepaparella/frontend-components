@@ -1,0 +1,117 @@
+@import '../abstracts/variables';
+.nota {
+    &.noticia {
+        .com-cita {
+            padding: 0 $px-20;
+            border: solid 1px $gris3;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            position: relative;
+            margin-bottom: $px-40;
+            width: 100%;
+            @media (min-width: 768px) {
+                padding: 0 $px-30;
+                flex-direction: row;
+                align-items: stretch;
+            }
+            &.autor {
+                .cont-figure {
+                    width: $px-100;
+                    background: $blanco;
+                    position: relative;
+                    padding: $px-30 0 $px-20 0;
+                    @media (min-width: 768px) {
+                        padding: $px-30 0;
+                    }
+                    &::after {
+                        content: '';
+                        width: $px-100;
+                        height: 1px;
+                        background: #000;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                    .figure {
+                        width: $px-100;
+                        height: $px-100;
+                        .content-pic {
+                            width: $px-100;
+                            height: $px-100;
+                            border-radius: 50%;
+                            &::after {
+                                display: none;
+                            }
+                            &::before {
+                                font-size: 6em;
+                            }
+                            .content-img {
+                                &:hover {
+                                    transition: none;
+                                    filter: none;
+                                }
+                            }
+                        }
+                        .content-pic {
+                            border: none;
+                        }
+                    }
+                }
+                .cont-cita {
+                    //padding: $px-10 0 $px-30 0; como viene sin imagenes se le corrige el padding
+                    padding: $px-20 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    @media (min-width: 768px) {
+                        //padding: $px-30 0 $px-30 $px-30; como viene sin imagenes se le corrige el padding
+                        padding: $px-30 0;
+                    }
+                    .title-cita {
+                        width: 100%;
+                        text-align: center;
+                        .text {
+                            font-family: $font-SuecaSlab;
+                            font-size: $font-24;
+                        }
+                        @media (min-width: 768px) {
+                            text-align: left;
+                        }
+                    }
+                    .cont-firma-autor {
+                        display: flex;
+                        justify-content: center;
+                        @media (min-width: 768px) {
+                            justify-content: flex-start;
+                        }
+                        flex-wrap: nowrap;
+                        width: 100%;
+                        .nombre-firma {
+                            font-weight: 700;
+                            margin-right: $px-5;
+                        }
+                    }
+                    .cont-data-firma {
+                        display: flex;
+                        justify-content: center;
+                        @media (min-width: 768px) {
+                            justify-content: flex-start;
+                        }
+                        flex-wrap: nowrap;
+                        width: 100%;
+                        .fecha-firma {
+                            color: #6e6e6e;
+                            font-size: $font-14;
+                            margin-right: $px-5;
+                        }
+                        .lugar-firma {
+                            color: #6e6e6e;
+                            font-size: $font-14;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

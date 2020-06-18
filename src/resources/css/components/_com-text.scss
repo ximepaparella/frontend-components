@@ -1,0 +1,66 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.com-text {
+    .footer & {
+        color: $gris5;
+        line-height: px(17);
+        font-size: px(14);
+    }
+    .mod-recaptcha & {
+        text-align: right;
+        margin-right: px(10);
+        width: 100%;
+    }
+    .mod-fiscal & {
+        width: 65%;
+    }
+    .mod-copyright & {
+        text-align: center;
+    }
+    .mod-breadcrumb & {
+        @include flex(flex, row, center, center);
+        font-family: $font-arial;
+        font-size: px(14);
+        color: $gris5;
+        padding: 0 px(9);
+        line-height: 1;
+        border-left: solid 1px $gris5;
+    }
+    &.--autor {
+        .mod-autor & {
+            line-height: px(24);
+            font-size: px(16);
+            font-weight: bold;
+            color: $negro;
+        }
+    }
+    &.--medio {
+        .mod-autor & {
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media ($media-m) {
+    .com-text {
+        .mod-fiscal & {
+            width: 100%;
+            text-align: center;
+        }
+        .mod-copyright & {
+            text-align: left;
+        }
+    }
+}
+@media ($media-l) {
+    .com-text {
+        .mod-fiscal & {
+            width: 100%;
+            text-align: center;
+        }
+        .mod-copyright & {
+            text-align: left;
+        }
+    }
+}

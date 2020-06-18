@@ -1,0 +1,71 @@
+@import '../abstracts/variables';
+.--btn {
+    font-family: $font-arial;
+    font-size: $font-12;
+    font-weight: bold;
+    padding: $px-11 $px-24;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: opacity 0.2s ease-in-out;
+    &:focus {
+        outline: 0;
+    }
+    &.--small {
+        padding: $px-8 $px-12;
+    }
+    &.--primary {
+        background-color: $link;
+        border: 1px solid $link;
+        color: $blanco;
+    }
+    &.--secondary {
+        background-color: $blanco;
+        border: 1px solid $link;
+        color: $link;
+        &:hover {
+            background-color: $link;
+            border: 1px solid $link;
+            color: $blanco;
+        }
+    }
+    &.--highlight {
+        background-color: $highlight;
+        border: 1px solid $gris3;
+        color: $negro;
+        &:hover {
+            background: $negro;
+            border-color: $negro;
+            color: $blanco;
+        }
+    }
+    &.--bright {
+        background-color: inherit;
+        border: 1px solid $blanco;
+        color: $blanco;
+    }
+    &:hover {
+        opacity: 0.8;
+        transition: opacity 0.2s ease-in-out;
+        cursor: pointer;
+    }
+}
+
+button:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+@media ($media-m) {
+    .--btn {
+        font-size: $font-11;
+        padding: $px-15 $px-35;
+    }
+}
+
+@media ($media-l) {
+    .--btn {
+        font-size: $font-12;
+        padding: $px-10 $px-24;
+    }
+}

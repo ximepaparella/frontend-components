@@ -1,0 +1,112 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.com-subtitle {
+    @include flex(flex);
+    margin-top: 40px; ////////////////////////
+    margin-bottom: $spacing-sm;
+    font-family: $font-SuecaSlab;
+    letter-spacing: $letter-spacing;
+    &.--xxxl {
+        font-size: px(32);
+        line-height: px(40);
+    }
+    &.--xxl {
+        font-size: px(32);
+        line-height: px(40);
+    }
+    &.--xl {
+        font-size: px(32);
+        line-height: px(40);
+    }
+    &.--l {
+        font-size: px(24);
+        line-height: px(32);
+    }
+    &.--m {
+        font-size: px(20);
+        line-height: px(28);
+    }
+    &.--s {
+        font-size: px(18);
+        line-height: px(26);
+    }
+    &.--xs {
+        font-size: px(16);
+        line-height: px(24);
+    }
+}
+@media ($media-m) {
+    .com-subtitle {
+        @include flex(flex);
+        margin-top: 40px; ////////////////////////
+        margin-bottom: $spacing-sm;
+        font-family: $font-SuecaSlab;
+        letter-spacing: $letter-spacing;
+        &.--xxxl {
+            font-size: px(32);
+            line-height: px(40);
+        }
+        &.--xxl {
+            font-size: px(32);
+            line-height: px(40);
+        }
+        &.--xl {
+            font-size: px(32);
+            line-height: px(40);
+        }
+        &.--l {
+            font-size: px(24);
+            line-height: px(32);
+        }
+        &.--m {
+            font-size: px(20);
+            line-height: px(28);
+        }
+        &.--s {
+            font-size: px(18);
+            line-height: px(26);
+        }
+        &.--xs {
+            font-size: px(16);
+            line-height: px(24);
+        }
+    }
+}
+@media ($media-l) {
+    .com-subtitle {
+        @include flex(flex);
+        margin-top: 40px; ////////////////////////
+        margin-bottom: $spacing-sm;
+        font-family: $font-SuecaSlab;
+        letter-spacing: $letter-spacing;
+        &.--xxxl {
+            font-size: px(32);
+            line-height: px(40);
+        }
+        &.--xxl {
+            font-size: px(32);
+            line-height: px(40);
+        }
+        &.--xl {
+            font-size: px(32);
+            line-height: px(40);
+        }
+        &.--l {
+            font-size: px(24);
+            line-height: px(32);
+        }
+        &.--m {
+            font-size: px(20);
+            line-height: px(28);
+        }
+        &.--s {
+            font-size: px(18);
+            line-height: px(26);
+        }
+        &.--xs {
+            font-size: px(16);
+            line-height: px(24);
+        }
+    }
+}

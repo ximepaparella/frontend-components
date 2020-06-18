@@ -1,0 +1,12 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.mod-breadcrumb {
+    margin-top: $px-30;
+    margin-bottom: $px-24;
+    .amp & {
+        display: none;
+        @media (min-width: 768px) {
+            display: inline-block;
+        }
+    }
+}

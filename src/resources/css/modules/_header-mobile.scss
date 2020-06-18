@@ -1,0 +1,42 @@
+@import '../abstracts/variables';
+//=====================
+// HEADER CORE MOBILE
+//=====================
+.header-mobile {
+    display: block;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gris2;
+    background: $blanco;
+    z-index: 1;
+    .header-mobile__logo {
+        .logo-la-nacion {
+            color: $ln;
+            font-size: 17px;
+        }
+    }
+    a {
+        color: $link;
+        font-family: arial;
+        text-transform: uppercase;
+        font-size: $font-12;
+    }
+    /*@media ($media-l) {
+        display: none;
+    }*/ // en tablet landscape se ve mal sin esto
+    //=================================
+    // ------ESTADOS DEL HEADER------
+    //=================================
+    &.--dark,
+    .acu-revista & {
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        a {
+            color: $blanco;
+            .logo-la-nacion {
+                color: $blanco;
+            }
+        }
+    }
+}

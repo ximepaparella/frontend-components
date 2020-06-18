@@ -1,0 +1,20 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.com-svg {
+    @include flex(flex, row, center, center);
+    width: px(16);
+    font-size: px(32);
+
+    .--apps & {
+        margin: 0 px(7.5);
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &.--gda {
+        width: px(48);
+    }
+    &.--fiscal {
+        width: px(32);
+    }
+}

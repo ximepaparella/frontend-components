@@ -1,0 +1,7 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.mod-link {
+    .footer & {
+        @include flex(flex, row, start, center);
+    }
+}

@@ -1,0 +1,26 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.--share {
+    .footer & {
+        @include flex(flex, row, center, center);
+        order: 3;
+        margin-bottom: px(24);
+        .amp & {
+            border-top: 1px solid $gris3;
+            padding-top: px(24);
+        }
+    }
+}
+@media ($media-l) {
+    .--share {
+        .footer & {
+            justify-content: flex-start;
+            order: 1;
+            margin-bottom: 0;
+            .amp & {
+                border-top: 0;
+                padding-top: 0;
+            }
+        }
+    }
+}

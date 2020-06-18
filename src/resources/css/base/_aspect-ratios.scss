@@ -1,0 +1,222 @@
+@import '../abstracts/variables';
+.cont-figure {
+    //background-color: $placeholder; LO SACO DARO PARA PRUEBA DE COMPONENETES
+
+    .more-articles & {
+        .cuerpo__nota & {
+            .figure {
+                &.contain-vertical {
+                    .content-pic {
+                        &.picture {
+                            padding-top: calc((2 / 3) * 100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cuerpo__nota & {
+        .figure {
+            &.contain-vertical {
+                .content-pic {
+                    &.picture {
+                        padding-top: calc((3 / 2) * 100%);
+                    }
+                }
+            }
+        }
+    }
+
+    .figure {
+        display: flex;
+        width: 100%;
+        .content-pic {
+            &.picture {
+                .contain {
+                    object-fit: cover;
+                    img {
+                        object-fit: inherit;
+                    }
+                }
+            }
+        }
+        &:hover {
+            opacity: 1;
+        }
+        /*.content-video {
+            width: 100%;
+            background: $gris1;
+            max-height: 100%;
+            max-width: 100%;
+            position: relative;
+            > * {
+                z-index: 1;
+            }
+            .content-multimedia {
+                display: flex;
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background: #000;
+            }
+        }*/
+        .content-pic {
+            width: 100%;
+            background: $gris1;
+            max-height: 100%;
+            max-width: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $gris3;
+
+            padding-top: $picture;
+
+            .--border &,
+            .aper-receta & {
+                border: none;
+            }
+            &:before {
+                font-family: 'LNlogos';
+                content: '\e80a';
+                color: #d9d9d9;
+                font-size: 4.22em;
+                //font-family: ln10;
+                font-style: normal;
+                font-weight: 400;
+                font-variant: normal;
+                text-transform: none;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+            &.zoom {
+                &:after {
+                    font-family: 'LNicons';
+                    color: $blanco;
+                    font-size: $font-25;
+                    content: '\e91d';
+                    position: absolute;
+                    width: $px-58;
+                    height: $px-42;
+                    top: 0;
+                    right: 0;
+                    background: $negro;
+                    opacity: 0.7;
+                    z-index: 10;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            > * {
+                z-index: 1;
+            }
+            .content-img {
+                display: flex;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                filter: brightness(100%);
+                transition: all 0.2s ease-in-out;
+                object-fit: cover;
+                &:hover {
+                    transition: all 0.2s ease-in-out;
+                    filter: brightness(110%);
+                }
+            }
+        }
+    }
+}
+
+.shadow {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.externo {
+    text-align: center;
+    margin: 0 auto $px-50;
+
+    iframe {
+        max-width: 100%;
+    }
+    twitter-widget {
+        margin: auto;
+    }
+}
+
+.cont-figure-wiki {
+    border-radius: 50%;
+    background: $blanco;
+    .figure {
+        display: flex;
+        width: 100%;
+        &:hover {
+            opacity: 1;
+        }
+        .picture {
+            width: 45px;
+            height: 45px;
+            @media (min-width: 768px) {
+                width: 80px;
+                height: 80px;
+            }
+            border-radius: 50%;
+        }
+        .content-pic {
+            //width: 100%;
+            max-height: 100%;
+            max-width: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $blanco;
+            &:before {
+                font-family: 'LNlogos';
+                content: '\e80a';
+                color: #d9d9d9;
+                font-size: 43px;
+                @media (min-width: 768px) {
+                    font-size: 78px;
+                }
+                //font-family: ln10;
+                font-style: normal;
+                text-transform: none;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+            .content-img {
+                width: 80px;
+                height: 80px;
+                z-index: 1;
+                background-color: $blanco;
+                &:before {
+                    content: '324';
+                    background: black;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 4;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

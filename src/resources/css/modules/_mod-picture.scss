@@ -1,0 +1,15 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.mod-picture {
+    width: 100%;
+    display: flex;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    .mod-media & {
+        padding-bottom: 66.8%;
+    }
+    .--zoom & {
+        cursor: pointer;
+    }
+}

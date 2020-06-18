@@ -1,0 +1,406 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+//Tener en cuenta que
+// el min valora mucho el orden
+// siempre menor resolucion primero
+
+//=======================================
+// GRilla sin Gap
+//=======================================
+// iniciamos fila (aca es donde dividimos 12)
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+}
+//=======================================
+// IMAGEN QUE SE ESCAPA DE MARGENES al 100%
+//=======================================
+.w-100 {
+    width: calc(100% + 20px);
+    margin-left: -$px-10;
+    &.banner {
+        margin-left: 0;
+        margin-top: -$px-20;
+        width: 100%;
+    }
+}
+
+@media ($media-s) {
+    .w-100 {
+        width: calc(100% + 40px);
+        margin-left: -$px-20;
+    }
+}
+@media ($media-m) {
+    .w-100 {
+        width: calc(100% + 60px);
+        margin-left: -$px-30;
+    }
+}
+@media ($media-l) {
+    .w-100 {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.w-100-mobile {
+    width: calc(100% + 20px);
+    margin-left: -$px-10;
+    //se agrega media max porq este valor solo debe venir en mobile y en las otras resoluciones
+    //traer el valor de otras clases, entonces no se puede darle un valor en resoluciones que no sea mobile.
+    @media screen and (max-width: 47em) {
+        border: none;
+    }
+}
+
+@media ($media-s) {
+    .w-100-mobile {
+        width: calc(100% + 40px);
+        margin-left: -$px-20;
+    }
+}
+@media ($media-m) {
+    .w-100-mobile {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+@media ($media-l) {
+    .w-100-mobile {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+// Particion de 12
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col,
+.col-auto,
+.col-mobile-1,
+.col-mobile-2,
+.col-mobile-3,
+.col-mobile-4,
+.col-mobile-5,
+.col-mobile-6,
+.col-mobile-7,
+.col-mobile-8,
+.col-mobile-9,
+.col-mobile-10,
+.col-mobile-11,
+.col-mobile-12,
+.col-mobile,
+.col-mobile-auto,
+.col-tablet-1,
+.col-tablet-2,
+.col-tablet-3,
+.col-tablet-4,
+.col-tablet-5,
+.col-tablet-6,
+.col-tablet-7,
+.col-tablet-8,
+.col-tablet-9,
+.col-tablet-10,
+.col-tablet-11,
+.col-tablet-12,
+.col-tablet,
+.col-tablet-auto,
+.col-desksm-1,
+.col-desksm-2,
+.col-desksm-3,
+.col-desksm-4,
+.col-desksm-5,
+.col-desksm-6,
+.col-desksm-7,
+.col-desksm-8,
+.col-desksm-9,
+.col-desksm-10,
+.col-desksm-11,
+.col-desksm-12,
+.col-desksm,
+.col-desksm-auto,
+.col-desklm-1,
+.col-desklm-2,
+.col-desklm-3,
+.col-desklm-4,
+.col-desklm-5,
+.col-desklm-6,
+.col-desklm-7,
+.col-desklm-8,
+.col-desklm-9,
+.col-desklm-10,
+.col-desklm-11,
+.col-desklm-12,
+.col-desklm,
+.col-desklm-auto,
+.col-deskxl-1,
+.col-deskxl-2,
+.col-deskxl-3,
+.col-deskxl-4,
+.col-deskxl-5,
+.col-deskxl-6,
+.col-deskxl-7,
+.col-deskxl-8,
+.col-deskxl-9,
+.col-deskxl-10,
+.col-deskxl-11,
+.col-deskxl-12,
+.col-deskxl,
+.col-deskxl-auto {
+    position: relative;
+    width: 100%;
+}
+
+.col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+// para todes les resoluciones
+.col-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}
+
+// .col-1 al .col-12
+@include columns('', 1, 12);
+.order-first {
+    -ms-flex-order: -1;
+    order: -1;
+}
+
+.order-last {
+    -ms-flex-order: 13;
+    order: 13;
+}
+
+// .order-0 al .order-12
+@include orders('', 0, 12);
+// .offset-1 al .offset-11
+@include offsets('', 0, 11);
+//Valores de tablet para arriba
+@media (min-width: 768px) {
+    .col-tablet {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .col-tablet-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+    // .col-tablet-1 al .col-tablet-12
+    @include columns('tablet-', 1, 12);
+    .order-tablet-first {
+        -ms-flex-order: -1;
+        order: -1;
+    }
+    .order-tablet-last {
+        -ms-flex-order: 13;
+        order: 13;
+    }
+    // .order-tablet-0 al .order-tablet-12
+    @include orders('tablet-', 0, 12);
+    // .offset-tablet-0 al .offset-tablet-11
+    @include offsets('tablet-', 0, 11);
+}
+
+@media ($media-l) {
+    .col-desksm {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .col-desksm-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+    // .col-desksm-1 al .col-desksm-12
+    @include columns('desksm-', 1, 12);
+    .order-desksm-first {
+        -ms-flex-order: -1;
+        order: -1;
+    }
+    .order-desksm-last {
+        -ms-flex-order: 13;
+        order: 13;
+    }
+    // .order-desksm-0 al .order-desksm-12
+    @include orders('desksm-', 0, 12);
+    // .offset-desksm-0 al .offset-desksm-11
+    @include offsets('desksm-', 0, 11);
+}
+@media ($media-lm) {
+    .col-desklm {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .col-desklm-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+    // .col-desklm-1 al .col-desklm-12
+    @include columns('desklm-', 1, 12);
+    .order-desklm-first {
+        -ms-flex-order: -1;
+        order: -1;
+    }
+    .order-desklm-last {
+        -ms-flex-order: 13;
+        order: 13;
+    }
+    // .order-desksm-0 al .order-desksm-12
+    @include orders('desklm-', 0, 12);
+    // .offset-desksm-0 al .offset-desksm-11
+    @include offsets('desklm-', 0, 11);
+}
+
+//Valores de desk para arriba
+@media ($media-lg) {
+    .col-deskxl {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .col-deskxl-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+    }
+    // .col-deskxl-1 al .col-deskxl-12
+    @include columns('deskxl-', 1, 12);
+    .order-deskxl-first {
+        -ms-flex-order: -1;
+        order: -1;
+    }
+    .order-deskxl-last {
+        -ms-flex-order: 13;
+        order: 13;
+    }
+    // .order-deskxl-0 al .order-deskxl-12
+    @include orders('deskxl-', 0, 12);
+    // .offset-deskxl-0 al .offset-deskxl-11
+    @include offsets('deskxl-', 0, 11);
+}
+
+//===================================
+// Grilla CON GAP
+//===================================
+//
+[class^='row-gap'],
+[class*=' row-gap'] {
+    display: grid;
+    grid-column-gap: $px-10;
+    grid-row-gap: $px-30;
+    @media ($media-s) {
+        grid-column-gap: $px-20;
+        grid-row-gap: $px-30;
+    }
+    @media ($media-m) {
+        grid-column-gap: $px-30;
+        grid-row-gap: $px-30;
+    }
+    @media ($media-l) {
+        grid-column-gap: $px-40;
+        grid-row-gap: $px-40;
+    }
+}
+
+//columnas de 4
+.row-gap-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+//columnas de 3
+.row-gap-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+//columnas de 2
+.row-gap-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+@media ($media-m) {
+    //columnas de 4
+    .row-gap-tablet-4 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    //columnas de 3
+    .row-gap-tablet-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    //columnas de 2
+    .row-gap-tablet-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media ($media-l) {
+    //columnas de 4
+    .row-gap-desksm-4 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    //columnas de 3
+    .row-gap-desksm-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    //columnas de 2
+    .row-gap-desksm-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .offset-negative {
+        margin-left: -8.3333%;
+        width: calc(100% + 8.3333%);
+    }
+}
+
+@media ($media-lg) {
+    //columnas de 4
+    .row-gap-deskxl-4 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    //columnas de 3
+    .row-gap-deskxl-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    //columnas de 2
+    .row-gap-deskxl-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}

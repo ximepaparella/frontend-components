@@ -1,0 +1,129 @@
+@import '../abstracts/variables';
+
+@media (max-width: 64em - 1) {
+    .hlp-tablet-none {
+        display: none;
+    }
+}
+//visible desde 767
+@media (max-width: 48em - 1) {
+    .hlp-mobile-show {
+        display: inline-block;
+    }
+}
+
+// oculto
+@media ($media-xs) {
+    .hlp-none {
+        display: none;
+    }
+    .hlp-mobile-none {
+        display: none;
+    }
+}
+
+@media ($media-m) {
+    .hlp-mobile-none {
+        display: inherit;
+    }
+}
+
+@media ($media-l) {
+    .hlp-mobile-none {
+        display: inherit;
+    }
+    .hlp-desksm-none {
+        display: none;
+    }
+}
+
+@media ($media-xl) {
+    .hlp-mobile-none {
+        display: inherit;
+    }
+    .hlp-desksm-none {
+        display: inherit;
+    }
+    .hlp-desk-none {
+        display: none;
+    }
+}
+
+.hlp-overflow-scroll {
+    overflow: scroll;
+}
+
+.hlp-bold {
+    font-weight: bold;
+}
+::selection {
+    background-color: $ln;
+    color: $blanco;
+}
+
+.hlp-marginRight-35 {
+    margin-right: $px-35;
+}
+.hlp-marginBottom-40,
+.hlp-marginBottom-mobile-40 {
+    margin-bottom: $px-40;
+}
+.hlp-marginBottom-20 {
+    margin-bottom: $px-20;
+}
+//agrega borde a la caja y un padding al texto
+.--border {
+    border: $px-1 solid $gris2;
+    .mod-caja-nota__descrip {
+        padding: $px-8 $px-15;
+        h2 {
+            margin-top: 0;
+        }
+        @media (min-width: 1024px) {
+            padding: $px-8;
+        }
+        @media (min-width: 1100px) {
+            padding: $px-13 $px-21 $px-20 $px-18;
+        }
+    }
+}
+
+@media ($media-m) {
+    .--threexl {
+        font-size: px(40);
+        line-height: px(52);
+    }
+    .--twoxl {
+        font-size: px(40);
+        line-height: px(52);
+    }
+    .--xl {
+        font-size: px(32);
+        line-height: px(40);
+    }
+    .--s {
+        font-size: px(18);
+        line-height: px(26);
+    }
+    .--capital::first-letter {
+        font-size: px(64);
+        font-family: $font-SuecaSlab;
+        font-weight: bold;
+        margin: $spacing;
+        float: left;
+    }
+}
+@media ($media-l) {
+    .--threexl {
+        font-size: px(48);
+        line-height: px(56);
+    }
+    .--twoxl {
+        font-size: px(40);
+        line-height: px(52);
+    }
+    .--xl {
+        font-size: px(32);
+        line-height: px(40);
+    }
+}

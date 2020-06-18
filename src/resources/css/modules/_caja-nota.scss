@@ -1,0 +1,123 @@
+@import '../abstracts/variables';
+.mod-caja-nota {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    .com-ranking & {
+        margin-bottom: $px-40;
+    }
+    a:hover {
+        color: $ln;
+    }
+    //Estructura de vista tipo lista, text e img en una misma linea (como era en mobile antes)
+    &.--lista {
+        grid-template-columns: 1fr 141px;
+        grid-column-gap: 10px;
+        .figure {
+            height: 94px;
+            order: 2;
+        }
+        @media ($media-m) {
+            display: initial;
+            .figure {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    &.--list {
+        margin-bottom: $px-40;
+        .com-hour {
+            margin-bottom: $px-8;
+        }
+        @media ($media-m) {
+            flex-direction: row;
+            .com-hour {
+                margin-right: $px-20;
+                margin-bottom: 0;
+            }
+            .cont-figure {
+                min-width: 213px;
+                margin-right: $px-20;
+            }
+        }
+    }
+    //agrega borde a la caja y un padding al texto
+    &.--border {
+        border: $px-1 solid $gris2;
+        .mod-caja-nota__descrip {
+            padding: $px-8 $px-15;
+            h2 {
+                margin-top: 0;
+            }
+            @media ($media-m) {
+                padding: $px-13 $px-21 $px-20 $px-18;
+            }
+        }
+    }
+    //le agrega un padding al texto en mobile
+    &.w-100-mobile {
+        .mod-caja-nota__descrip {
+            padding-left: $px-10;
+            padding-right: $px-10;
+            @media ($media-s) {
+                padding-left: $px-20;
+                padding-right: $px-20;
+            }
+            @media ($media-m) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        &.--border {
+            .mod-caja-nota__descrip {
+                @media ($media-m) {
+                    padding: $px-15;
+                }
+            }
+        }
+    }
+}
+
+.more-articles {
+    margin-bottom: $px-32;
+    .com-title-section-l {
+        margin-bottom: $px-24;
+        line-height: $line-24;
+    }
+    > section {
+        margin-bottom: $px-40;
+    }
+}
+
+.interest {
+    padding-top: $px-40;
+    border-top: 1px solid $gris3;
+    .com-title-section-l {
+        margin-bottom: $px-24;
+        line-height: $line-40;
+    }
+    > section {
+        margin-bottom: $px-40;
+    }
+}
+
+.more-articles,
+.interest {
+    .mod-caja-nota {
+        .cont-figure {
+            margin: 0 -0.625rem;
+            @media (min-width: 321px) {
+                margin: 0 -1.25rem;
+            }
+            @media (min-width: 450px) {
+                margin: 0;
+            }
+        }
+        &.--border {
+            .cont-figure {
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import '../abstracts/variables';
+.colecciones {
+    font-family: $font-arial;
+    font-size: $font-16;
+    line-height: $line-16;
+    margin: $px-40 0;
+    border: 1px solid $gris2;
+    .cont-figure {
+        border-bottom: 11px solid $highlight;
+        background: url('../../img/colecciones.svg') no-repeat center center;
+        background-size: 90%;
+        height: 187px;
+        background-color: $negro;
+        object-fit: contain;
+    }
+}

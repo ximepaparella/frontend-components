@@ -1,0 +1,392 @@
+@import '../abstracts/variables';
+.layout {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* ////////////////////////SIDEBAR*/
+
+amp-sidebar {
+    //Sidebar
+    width: 100%;
+    max-width: 100%;
+    background: #f4f4f4;
+
+    .header_sidebar {
+        //Header
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background: #fff;
+        border-bottom: solid 1px #eaeaea;
+        margin-bottom: 10px;
+
+        .logo-la-nacion {
+            //Logo LN
+            font-size: 15px;
+            color: #006998;
+        }
+        .icon-close {
+            //Ícono cerrar
+            background: transparent;
+            font-size: 28px;
+        }
+    }
+
+    .menu-nav {
+        //Menú
+        height: calc(100% - 130px);
+
+        .menu_li {
+            background: #fff;
+
+            a {
+                font-family: arial;
+                width: 100%;
+                text-align: left;
+                padding: 15px 20px;
+                border-top: 0;
+                border-bottom: 1px solid #dfdfdf;
+                display: block;
+                color: #3f3f3f;
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            &.desplegable {
+                .page-title {
+                    width: 50%;
+                }
+
+                h2 {
+                    display: flex;
+                    align-items: center;
+                    font-family: arial;
+
+                    font-weight: normal;
+                    text-align: left;
+                    border-top: 0;
+                    border-bottom: 1px solid #dfdfdf;
+                    background: #fff;
+                    color: #3f3f3f;
+                    font-weight: bold;
+                    font-size: 16px;
+
+                    &.icon-right:before {
+                        top: calc(50% - 10px);
+                        font-family: 'LNicons';
+                        font-size: 20px;
+                        display: block;
+                        position: absolute;
+                        right: 15px;
+                    }
+                    &.icon-right[aria-expanded='true'] {
+                        background-color: #f2f2f2;
+                        text-decoration: underline;
+
+                        a {
+                            color: #0074c4;
+                            padding: 15px 20px;
+                        }
+
+                        &::before {
+                            transform: rotate(90deg);
+                        }
+                    }
+                    a.url-link {
+                        display: inline-flex;
+                        width: 80%;
+                        border-bottom: 0;
+                    }
+                }
+            }
+
+            .menu {
+                .menu_secciones {
+                    a {
+                        font-family: arial;
+                        width: 100%;
+                        text-align: left;
+                        padding: 15px 40px;
+                        border-top: 0;
+                        border-bottom: 1px solid #dfdfdf;
+                        display: block;
+                        color: #3f3f3f;
+                        font-weight: normal;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ////////////////////////FOOTER-NAV*/
+
+.nav {
+    border-top: 1px solid #cccccc;
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    min-height: 55px;
+    padding: 5px 0;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    background: #ffffff;
+    z-index: 9999999999999999;
+
+    button {
+        &.icon-menu {
+            font-family: 'arial';
+            background: transparent;
+            border: none;
+            width: calc(100% / 4);
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            cursor: pointer;
+
+            &:before {
+                font-size: 30px;
+                display: block;
+                font-family: 'LNicons';
+                content: '\e912';
+            }
+        }
+    }
+
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+
+        &.icon-home {
+            font-family: 'arial';
+            font-size: 12px;
+            width: calc(100% / 5);
+
+            &:before {
+                font-size: 30px;
+                display: block;
+                font-family: 'LNicons';
+            }
+        }
+        &.icon-club {
+            width: calc(100% / 3);
+            font-family: 'arial';
+            font-size: 12px;
+
+            &:before {
+                font-size: 30px;
+                display: block;
+                font-family: 'LNicons';
+            }
+        }
+        &.icon-user {
+            width: calc(100% / 4);
+            font-family: 'arial';
+            font-size: 12px;
+
+            &:before {
+                font-size: 30px;
+                display: block;
+                font-family: 'LNicons';
+            }
+        }
+        &.icon-cuenta {
+            font-family: 'arial';
+            font-size: 12px;
+
+            &:before {
+                font-size: 30px;
+                display: block;
+                font-family: 'LNicons';
+            }
+        }
+    }
+}
+
+.icon-cerrar {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-family: 'LNicons';
+}
+a.icon-cerrar:before {
+    font-family: 'LNicons';
+    font-size: 20px;
+    display: block;
+}
+.header {
+    border-bottom: 1px solid #cccccc;
+    .header__middle {
+        display: flex;
+        align-items: center;
+        .header__middle__logo {
+            .logo-la-nacion {
+                //Logo LN
+                color: #006998;
+                &:before {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+
+    button {
+        &.icon-menu {
+            display: none;
+        }
+    }
+    .suscribir__header {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 0;
+        background: transparent;
+        color: #006998;
+        font-weight: normal;
+        border: none;
+        &:hover {
+            padding-right: 0;
+            background: transparent;
+            color: #006998;
+            border: none;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    amp-sidebar {
+        width: 40%;
+        max-width: 40%;
+    }
+    .header {
+        .suscribir__header {
+            display: inline-block;
+            justify-content: inherit;
+            text-align: center;
+            padding: 0.625rem 1.5rem;
+            background-color: #ffff24;
+            border: 1px solid #cccccc;
+            color: #000000;
+            &:hover {
+                background: #000000;
+                border-color: #000000;
+                color: #ffffff;
+                padding: 0.625rem 1.5rem;
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+
+        .lay {
+            .row {
+                align-items: center;
+                .logo-la-nacion {
+                    //Logo LN
+                    color: #006998;
+                    &:before {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+
+        button {
+            &.icon-menu {
+                font-family: 'arial';
+                background: transparent;
+                border: none;
+                font-size: 15px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                cursor: pointer;
+
+                &:before {
+                    font-size: 30px;
+                    display: block;
+                    font-family: 'LNicons';
+                }
+            }
+        }
+    }
+    amp-sidebar {
+        width: 25%;
+        max-width: 25%;
+    }
+    .nav {
+        display: none;
+    }
+}
+/*
+.contain-vertical {
+    background: #efefef;
+    position: relative;
+    width: 100%;
+    padding-top: calc((2 / 3) * 100%);
+
+    .cuerpo__nota & {
+        padding-top: calc((3 / 2) * 100%);
+    }
+
+    /*height: 100vw;
+    @media (min-width: 768px) {
+        height: calc(100vw - 360px);
+    }
+    @media (min-width: 1024px) {
+        height: calc(100vw - 512px);
+    }
+    @media (min-width: 1280px) {
+        height: calc(100vw - 768px);
+    }
+
+    .contain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            object-fit: cover;
+            top: inherit;
+            left: inherit;
+            bottom: inherit;
+            right: inherit;
+        }
+    }
+}
+*/
+.header {
+    .amp & {
+        padding: 10px 0;
+        .header__middle__logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+@media ($media-l) {
+    .header {
+        .amp & {
+            padding: 0;
+        }
+    }
+}

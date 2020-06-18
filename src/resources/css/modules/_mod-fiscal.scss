@@ -1,0 +1,15 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.mod-fiscal {
+    @include flex(flex, row, between, start);
+    margin-bottom: px(24);
+    order: 1;
+}
+@media ($media-l) {
+    .mod-fiscal {
+        @include flex(flex, row, between, start);
+        margin-bottom: 0;
+        order: 2;
+    }
+}

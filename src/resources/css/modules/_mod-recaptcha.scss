@@ -1,0 +1,11 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.mod-recaptcha {
+    @include flex(flex, row, end, center);
+    flex-wrap: wrap;
+}
+@media ($media-lm) {
+    .mod-recaptcha {
+        flex-wrap: nowrap;
+    }
+}

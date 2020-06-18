@@ -1,0 +1,352 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+/* FONTS --------------- */
+
+@include font-face('SuecaSlab', suecaslab-medium-webfont, 500);
+@include font-face('SuecaSlab', suecaslab-bold-webfont, 700);
+@include font-face('LNicons', ln-icons-v3, normal);
+@include font-face('LNlogos', ln-logos, normal);
+
+strong,
+.element-paragraph b {
+    font-weight: 700;
+}
+
+/* ICONS V3--------------- */
+
+[class^='icon-'],
+[class*=' icon-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'LNicons';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: $font-26;
+    padding: $px-3;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-bullet:before {
+    content: '\e900';
+}
+.icon-check:before {
+    content: '\e901';
+}
+.icon-close:before {
+    content: '\e902';
+}
+.icon-cloudy:before {
+    content: '\e903';
+}
+.icon-club:before {
+    content: '\e904';
+}
+.icon-comment:before {
+    content: '\e905';
+}
+.icon-down:before {
+    content: '\e906';
+}
+.icon-email:before {
+    content: '\e907';
+}
+.icon-facebook:before {
+    content: '\e908';
+}
+.icon-fast:before {
+    content: '\e909';
+}
+.icon-headset:before {
+    content: '\e90a';
+}
+.icon-home:before {
+    content: '\e90b';
+}
+.icon-instagram:before {
+    content: '\e90c';
+}
+.icon-left:before {
+    content: '\e90d';
+}
+.icon-like:before {
+    content: '\e90e';
+}
+.icon-lock:before {
+    content: '\e90f';
+}
+.icon-menu:before {
+    content: '\e910';
+}
+.icon-rain:before {
+    content: '\e911';
+}
+.icon-reply:before {
+    content: '\e912';
+}
+.icon-report:before {
+    content: '\e913';
+}
+.icon-right:before {
+    content: '\e914';
+}
+.icon-rss:before {
+    content: '\e915';
+}
+.icon-search:before {
+    content: '\e916';
+}
+.icon-sections:before {
+    content: '\e917';
+}
+.icon-setting:before {
+    content: '\e918';
+}
+.icon-share-android:before {
+    content: '\e919';
+}
+.icon-share-ios:before {
+    content: '\e91a';
+}
+.icon-slow:before {
+    content: '\e91b';
+}
+.icon-snow:before {
+    content: '\e91c';
+}
+.icon-star:before {
+    content: '\e91d';
+}
+.icon-storm:before {
+    content: '\e91e';
+}
+.icon-sun-cloudy:before {
+    content: '\e91f';
+}
+.icon-sun:before {
+    content: '\e920';
+}
+.icon-time:before {
+    content: '\e921';
+}
+.icon-twitter:before {
+    content: '\e922';
+}
+.icon-unlock:before {
+    content: '\e923';
+}
+.icon-up:before {
+    content: '\e924';
+}
+.icon-user:before {
+    content: '\e925';
+}
+.icon-whatsapp:before {
+    content: '\e926';
+}
+.icon-windy:before {
+    content: '\e927';
+}
+.icon-zoom:before {
+    content: '\e928';
+}
+
+// .icon-android:before {
+//     content: '\e900';
+// }
+// .icon-bullet:before {
+//     content: '\e901';
+// }
+// .icon-check:before {
+//     content: '\e902';
+// }
+// .icon-clap:before {
+//     content: '\e903';
+// }
+// .icon-close:before {
+//     content: '\e904';
+// }
+// .icon-club {
+//     padding-bottom: 1px;
+//     &:before {
+//         content: '\e905';
+//     }
+// }
+// .icon-comment:before {
+//     content: '\e906';
+// }
+// .icon-down:before {
+//     content: '\e907';
+// }
+// .icon-facebook:before {
+//     content: '\e908';
+// }
+// .icon-home {
+//     margin-top: -1px;
+//     padding-bottom: 1px;
+//     &:before {
+//         content: '\e909';
+//     }
+// }
+// .icon-inbox:before {
+//     content: '\e90a';
+// }
+// .icon-instagram:before {
+//     content: '\e90b';
+// }
+// .icon-ios:before {
+//     content: '\e90c';
+// }
+// .icon-left:before {
+//     content: '\e90d';
+// }
+// .icon-lock:before {
+//     content: '\e90e';
+// }
+// .icon-mail:before {
+//     content: '\e90f';
+// }
+// .icon-menu:before {
+//     content: '\e910';
+// }
+// .icon-portion:before {
+//     content: '\e911';
+// }
+// .icon-right:before {
+//     content: '\e912';
+// }
+// .icon-rss:before {
+//     content: '\e913';
+// }
+// .icon-search:before {
+//     content: '\e914';
+// }
+// .icon-section:before {
+//     content: '\e915';
+// }
+// .icon-setting:before {
+//     content: '\e916';
+// }
+// .icon-star:before {
+//     content: '\e917';
+// }
+// .icon-time:before {
+//     content: '\e918';
+// }
+// .icon-twitter:before {
+//     content: '\e919';
+// }
+// .icon-unlock:before {
+//     content: '\e91a';
+// }
+// .icon-up:before {
+//     content: '\e91b';
+// }
+// .icon-user {
+//     margin-top: -1px;
+//     padding-bottom: 1px;
+//     &:before {
+//         content: '\e91c';
+//     }
+// }
+// .icon-whatsapp:before {
+//     content: '\e91d';
+// }
+// .icon-zoom:before {
+//     content: '\e91e';
+// }
+
+/////////////7//////////////////////////////
+
+[class^='logo-'],
+[class*=' logo-'] {
+    font-family: 'LNlogos';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: $font-15;
+    display: inline-block;
+    @media (min-width: 768px) {
+        font-size: $font-26;
+    }
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^='logo-']:not(.logo-la-nacion),
+[class*=' logo-'] {
+    margin-top: $px-20;
+    margin-bottom: $px-12;
+}
+
+.logo-brando:before {
+    content: $logo-brando;
+}
+
+.logo-club:before {
+    content: '\e801';
+}
+
+.logo-club-lanacion:before {
+    content: '\e802';
+}
+
+.logo-hola:before {
+    content: $logo-hola;
+}
+
+.logo-hola-argentina:before {
+    content: '\e804';
+}
+
+.logo-jardin:before {
+    content: $logo-jardin;
+}
+
+.logo-la-nacion:before {
+    content: '\e806';
+    color: $ln;
+}
+
+.logo-living:before {
+    content: $logo-living;
+}
+
+.logo-ln:before {
+    content: '\e808';
+}
+
+.logo-ln-mas:before {
+    content: '\e809';
+}
+
+.logo-ln-placeholder:before {
+    content: '\e80a';
+}
+
+.logo-lugares:before {
+    content: $logo-lugares;
+}
+
+.logo-negocios:before {
+    content: '\e80c';
+}
+
+.logo-ohlala:before {
+    content: $logo-ohlala;
+}
+
+.logo-rolling:before {
+    content: $logo-rolling;
+}
+
+.logo-bbc:before {
+    content: '\e80f';
+    color: #bb1919;
+}

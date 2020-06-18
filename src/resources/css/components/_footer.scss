@@ -1,0 +1,215 @@
+@import '../abstracts/variables';
+
+.footer {
+    margin: $px-60 0 $px-60;
+
+    @media ($media-l) {
+        margin: $px-40 0 $px-20;
+    }
+}
+
+/* footer {
+    margin-bottom: $px-20;
+    .footer-header {
+        margin-bottom: $px-20;
+        @media ($media-l) {
+            padding-bottom: $px-15;
+            border-bottom: 1px solid $gris3;
+        }
+        .footer-header__logo {
+            border-bottom: 1px solid $gris3;
+            padding-bottom: $px-20;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media ($media-l) {
+                order: 2;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+            .logo-la-nacion {
+                font-size: $font-22;
+                color: $ln;
+            }
+            a {
+                display: inline-flex;
+                height: fit-content;
+            }
+        }
+        .footer-header__redes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: $px-10;
+            margin-bottom: $px-20;
+            @media ($media-l) {
+                order: 1;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            @media (min-width: 1024px) {
+                justify-content: flex-start;
+            }
+            a {
+                display: inline-flex;
+            }
+            i {
+                margin-right: $px-20;
+                @media (max-width: 1023px) {
+                    margin: $px-10;
+                }
+            }
+        }
+        .footer-header__app {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                height: $px-35;
+            }
+            @media ($media-l) {
+                order: 3;
+                justify-content: flex-end;
+            }
+            .app_ios {
+                margin-left: $px-30;
+            }
+        }
+    }
+    .footer-sitio {
+        margin-bottom: $px-20;
+        .footer-sitio__links {
+            display: none;
+            @media (min-width: 1024px) {
+                display: flex;
+            }
+            .item_link {
+                font-size: $font-14;
+                color: $link;
+                margin-right: $px-21;
+                height: fit-content;
+                width: fit-content;
+            }
+        }
+        .footer-sitio__captcha {
+            line-height: $px-18;
+            display: none;
+            @media (min-width: 1024px) {
+                display: flex;
+            }
+            p {
+                color: $gris5;
+                font-size: $font-14;
+                line-height: $px-20;
+                height: fit-content;
+                width: fit-content;
+                text-align: right;
+                width: 100%;
+                span {
+                    display: block;
+                    @media (min-width: 1280px) {
+                        display: inline;
+                    }
+                }
+                a {
+                    color: $link;
+                    margin-left: $px-15;
+                }
+            }
+            .private {
+                font-size: $font-14;
+                line-height: $px-18;
+            }
+            .condition {
+                font-size: $font-14;
+                line-height: $px-18;
+            }
+        }
+    }
+    .footer-copyright {
+        margin-bottom: $px-20;
+        .footer-copyright__fiscal {
+            p {
+                color: $gris5;
+                font-size: $font-14;
+                line-height: $px-20;
+                height: fit-content;
+                width: fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                vertical-align: top;
+                text-align: left;
+                margin: -$px-20 0 $px-20 0;
+                .img_gda {
+                    margin: 0 $px-20 0 -$px-5;
+                }
+                a {
+                    margin-left: $px-20;
+                    .img_data-fiscal {
+                        width: $px-35;
+                    }
+                }
+            }
+            @media ($media-l) {
+                order: 2;
+                p {
+                    text-align: right;
+                    width: 100%;
+                    margin: -$px-6 0 0 0;
+                    display: block;
+                    a {
+                        float: right;
+                        margin-top: $px-8;
+                    }
+                }
+            }
+            .fiscal_row {
+                width: 100%;
+                @media (min-width: 1024px) {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                .logo-gda {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    @media (max-width: 1023px) {
+                        align-items: center;
+                    }
+                    @media (min-width: 1024px) {
+                        margin-top: -10px;
+                    }
+                }
+                .gda {
+                    font-family: Arial, 'sans-serif';
+                    font-size: $font-14;
+                    line-height: $px-20;
+                    display: flex;
+                    justify-content: center;
+                    @media (max-width: 1023px) {
+                        align-items: center;
+                    }
+                    .img_gda {
+                        height: $px-15;
+                    }
+                }
+                .data-fiscal {
+                    .img_data-fiscal {
+                        width: $px-35;
+                    }
+                }
+            }
+        }
+        .footer-copyright__reserved {
+            font-size: $font-14;
+            line-height: $px-24;
+            color: $gris5;
+            text-align: center;
+            @media ($media-l) {
+                text-align: left;
+                order: 1;
+            }
+        }
+    }
+}
+ */

@@ -1,0 +1,43 @@
+@import '../abstracts/variables';
+.com-epigrafe {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $px-10 0 $px-20;
+    background: $blanco;
+    @media (min-width: 768px) {
+        &:after {
+            content: '';
+            display: block;
+            border-bottom: 1px solid #dedede;
+            width: 100%;
+            padding-bottom: $px-20;
+        }
+    }
+    .com-slider & {
+        border-bottom: 0;
+        min-height: $px-72;
+        max-width: 80%;
+        @media (min-width: 768px) {
+            max-width: initial;
+        }
+    }
+    p {
+        width: 100%;
+        margin-bottom: 0;
+        &.text {
+            font-family: Arial;
+            font-size: $font-14;
+            line-height: $line-14;
+            @media (min-width: 768px) {
+                font-size: $font-16;
+                line-height: $line-16;
+            }
+        }
+        &.small {
+            color: #6e6e6e;
+            font-size: $font-14;
+            margin-top: $px-8;
+            text-transform: capitalize;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.mod-figure {
+    position: relative;
+    margin-bottom: px(32);
+
+    &.--zoom {
+        &::before {
+            //@extend .icon-zoom;
+            font-family: 'LNicons';
+            content: '\e928';
+            color: $blanco;
+            background: rgba(0, 0, 0, 0.7);
+            font-size: px(16);
+            width: px(31);
+            height: px(24);
+            position: absolute;
+            top: px(8);
+            right: px(8);
+            z-index: 10;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            @media ($media-l) {
+                font-size: px(25);
+                width: px(40);
+                height: px(30);
+                display: none;
+            }
+        }
+        &:hover::before {
+            display: flex;
+        }
+
+        &.--active {
+            position: fixed !important;
+            z-index: 999999;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: auto !important;
+            height: auto !important;
+            max-width: none !important;
+            margin: 0 auto !important;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            &::before {
+                content: '\e902';
+                display: flex;
+            }
+        }
+    }
+}

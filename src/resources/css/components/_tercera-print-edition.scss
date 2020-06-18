@@ -1,0 +1,13 @@
+@import '../abstracts/variables';
+
+.edicion {
+    text-align: center;
+}
+
+.diario-hoy img {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.carta-lectores {
+    border: solid 1px $gris2;
+}

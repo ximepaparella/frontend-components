@@ -1,0 +1,61 @@
+@import '../abstracts/variables';
+.wiki-autor {
+    margin-bottom: $px-40;
+    h1 {
+        display: inline;
+    }
+    label {
+        font-family: $font-arial;
+        font-size: $font-14;
+        line-height: $px-19;
+        display: block;
+    }
+    p {
+        font-family: $font-arial;
+        font-size: $font-16;
+        line-height: $px-23;
+        span {
+            display: block;
+            a {
+                color: $ln;
+            }
+        }
+    }
+    .cont-figure-wiki {
+        display: inline-block;
+        margin-right: $px-10;
+        margin-bottom: $px-20;
+        img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+    }
+    .wiki-calc {
+        width: calc(100% - 55px);
+        margin-top: $px-5;
+        display: inline-block;
+        label {
+            margin: $px-15 0 $px-20;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .wiki-autor {
+        p {
+            display: block;
+        }
+        .wiki-calc {
+            width: calc(100% - 200px);
+        }
+        .cont-figure-wiki {
+            display: inline-block;
+            margin-right: $px-30;
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+}

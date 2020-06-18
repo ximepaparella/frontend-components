@@ -1,0 +1,105 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.com-link {
+    font-family: $font-arial;
+    font-size: px(14);
+    color: $link;
+    text-transform: initial;
+    .listuser & {
+        padding: px(10) px(20);
+    }
+    &.--gda {
+        font-size: px(48);
+    }
+    &.--highlight {
+        &:hover {
+            background: $negro;
+            border-color: $negro;
+            color: $blanco;
+        }
+    }
+    .mod-fiscal & {
+        width: px(16);
+    }
+    .--apps & {
+        &:last-child {
+            margin-left: px(30);
+        }
+        svg {
+            width: 154px;
+            height: auto;
+        }
+    }
+    .mod-link & {
+        .footer & {
+            margin: 0 px(7.5);
+        }
+    }
+    .mod-recaptcha & {
+        .footer & {
+            margin: 0 px(7.5);
+        }
+    }
+    .mod-breadcrumb & {
+        display: flex;
+        border-left: solid 1px $gris5;
+        padding: 0 px(9);
+        text-transform: initial;
+    }
+    &:first-letter {
+        .mod-breadcrumb & {
+            text-transform: capitalize;
+        }
+    }
+    .com-li:first-child & {
+        .mod-breadcrumb & {
+            border: 0;
+            padding-left: 0;
+            text-transform: uppercase;
+        }
+    }
+    .mod-media & {
+        width: 100%;
+    }
+    .mod-autor & {
+        line-height: px(24);
+        font-size: px(16);
+        font-weight: bold;
+    }
+    .com-paragraph & {
+        display: contents;
+        font-family: Georgia;
+        font-size: px(18);
+        line-height: px(26);
+        font-weight: normal;
+        .mod-paragraph & {
+            font-family: $font-SuecaSlab;
+            font-size: px(20);
+            line-height: px(28);
+            font-weight: bold;
+            display: contents;
+        }
+    }
+}
+@media ($media-l) {
+    .com-link {
+        .--apps & {
+            svg {
+                width: auto;
+            }
+        }
+        &.--highlight {
+            margin-right: px(35);
+            font-family: $font-arial;
+            font-size: $font-12;
+            font-weight: bold;
+            padding: $px-10 $px-24;
+            text-transform: uppercase;
+            border-radius: 3px;
+            transition: opacity 0.2s ease-in-out;
+            background-color: $highlight;
+            border: 1px solid $gris3;
+            color: $negro;
+        }
+    }
+}

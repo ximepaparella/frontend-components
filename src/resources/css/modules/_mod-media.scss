@@ -1,0 +1,64 @@
+// @import '../abstracts/variables';
+// @import '../abstracts/mixins';
+
+// .mod-media {
+//     position: relative;
+//     background: $gris1;
+//     border-top: 1px solid $gris3;
+//     border-bottom: 1px solid $gris3;
+//     margin-bottom: $px-8;
+//     overflow: hidden;
+
+//     //@include flex(flex, row, end, center);
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     @media ($media-m) {
+//         border: 1px solid $gris3;
+//     }
+
+//     //Placeholder
+//     &:before {
+//         font-family: 'LNlogos' !important;
+//         content: '\e80a';
+//         color: $gris2;
+//         @include fonts(67, null);
+//         position: absolute;
+
+//         .ohlala & {
+//             content: '\e80d';
+//             font-size: $font-30;
+//         }
+
+//         .rolling & {
+//             content: '\e80e';
+//             font-size: $font-30;
+//         }
+
+//         .living & {
+//             content: '\e807';
+//             font-size: $font-30;
+//         }
+
+//         .jardin & {
+//             content: '\e805';
+//             font-size: $font-30;
+//         }
+
+//         .hola & {
+//             content: '\e803';
+//             font-size: $font-30;
+//         }
+
+//         .lugares & {
+//             content: '\e80b';
+//             font-size: $font-30;
+//         }
+
+//         .brando & {
+//             content: '\e800';
+//             font-size: $font-30;
+//         }
+//     }
+// }

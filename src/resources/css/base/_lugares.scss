@@ -1,0 +1,8 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.lugares {
+    $primario: $lugares;
+    $logo: $logo-lugares;
+    @include revista($logo, $primario);
+}

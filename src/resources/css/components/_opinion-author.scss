@@ -1,0 +1,69 @@
+@import '../abstracts/variables';
+.opinion-autor {
+    margin-top: $px-20;
+    h1 {
+        display: inline;
+    }
+    label {
+        font-family: $font-arial;
+        font-size: $font-12;
+        line-height: $px-20;
+        color: #6e6e6e;
+        display: block;
+        text-transform: uppercase;
+    }
+
+    .cont-figure {
+        display: inline-block;
+        margin-right: $px-10;
+        margin-bottom: $px-20;
+        .figure {
+            width: 60px;
+            height: 60px;
+            .content-pic {
+                background-color: $blanco;
+                border: 0;
+                &:before {
+                    font-size: 3.8em;
+                }
+                img {
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .opinion-calc {
+        width: calc(100% - 75px);
+        display: grid;
+        align-self: center;
+        label {
+            margin: $px-5 0 $px-10;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .opinion-autor {
+        label {
+            font-size: $font-14;
+        }
+        p {
+            display: block;
+        }
+        .opinion-calc {
+            width: calc(100% - 200px);
+        }
+        .cont-figure {
+            margin-right: $px-18;
+            .figure {
+                width: 80px;
+                height: 80px;
+                .content-pic {
+                    &:before {
+                        font-size: 4.8em;
+                    }
+                }
+            }
+        }
+    }
+}

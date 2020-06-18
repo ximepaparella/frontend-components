@@ -1,0 +1,55 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.mod-logo {
+    display: inline-flex;
+    height: fit-content;
+    .logo-la-nacion {
+        font-size: px(17);
+    }
+
+    @media (min-width: 769px) {
+        .header__middle & {
+            .header & {
+                .logo-la-nacion {
+                    font-size: px(28);
+                }
+            }
+        }
+    }
+
+    @media ($media-l) {
+        .header__middle & {
+            .header & {
+                .logo-la-nacion {
+                    font-size: px(30);
+                }
+            }
+        }
+
+        .footer & {
+            .logo-la-nacion {
+                font-size: px(22);
+            }
+        }
+    }
+}
+
+.--logo {
+    .footer & {
+        @include flex(flex, row, center, center);
+        order: 1;
+        margin-bottom: px(16);
+        padding-bottom: px(24);
+        border-bottom: 1px solid $gris3;
+    }
+
+    @media ($media-l) {
+        .footer & {
+            order: 2;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border: none;
+        }
+    }
+}

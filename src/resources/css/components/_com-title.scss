@@ -1,0 +1,11 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.com-title {
+    @include flex(flex);
+    margin-top: 40px; ////////////////////////
+    margin-bottom: $spacing-sm;
+    font-family: $font-SuecaSlab;
+    font-weight: 700;
+    letter-spacing: $letter-spacing;
+}

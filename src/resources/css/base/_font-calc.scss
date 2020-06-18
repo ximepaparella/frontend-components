@@ -1,0 +1,24 @@
+@import '../abstracts/variables';
+
+$min_width-xs: 20em; // iPhone
+$min_width-s: 22.5625em; // mobile
+$min_width-ms: 47.9375em; // Tablets
+$min_width-m: 64.0625em; // Escritorios
+$min_width-lg: 83.75em; // Resoluciones grandes
+html {
+    // @media screen and (min-width: $min_width-xs) {
+    //     font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1340 - 320)));
+    // }
+    // @media screen and (min-width: $min_width-s) {
+    //     font-size: calc(16px + (18 - 16) * ((100vw - 360px) / (1340 - 360)));
+    // }
+    // @media screen and (min-width: $min_width-ms) {
+    //     font-size: calc(16px + (18 - 16) * ((100vw - 768px) / (1340 - 768)));
+    // }
+    // @media screen and (min-width: $min_width-m) {
+    //     font-size: calc(16px + (18 - 16) * ((100vw - 1024px) / (1340 - 1024)));
+    // }
+    // @media screen and (min-width: $min_width-lg) {
+    //     font-size: 16px;
+    // }
+}

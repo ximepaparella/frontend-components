@@ -1,0 +1,415 @@
+/* COLUMNAS*/
+
+$cant-col: 12; //Cantidad de columnas
+$col-width: 100 / $cant-col; //Ancho de columnas
+$scroll-width: 1.063rem; //17px
+
+/* COLORES */
+
+$gris1: #f2f2f2;
+$gris2: #d9d9d9;
+$gris3: #cccccc;
+$gris4: #999999;
+$gris5: #5a5a5a;
+$gris6: #333333;
+$author: #ebe8e5;
+$exclusivo: #d1c4e9;
+$highlight: #ffff24;
+$bullet: #42b2ff;
+$link: #0074c4;
+$ln: #006998;
+$ohlala: #e61f63;
+$brando: #c6480c;
+$living: #000000;
+$hola: #bf0811;
+$jardin: #e6b87b;
+$lugares: #009c9a;
+$rolling: #b40d15;
+$lnmas: #322d61;
+$deportes: #0d880c;
+$negocios: #d83e2c;
+$espectaculos: #eb0049;
+$lifestyle: #008185;
+$club: #0003a6;
+$club2: #007aff;
+$blanco: #ffffff;
+$negro: #000000;
+$placeholder: #f2f2f2;
+$afondo: #f44336;
+
+$info: #003f5b;
+$light-info: #b7e9ff;
+$success: #10703c;
+$light-success: #cfedda;
+$warning: #8a6913;
+$light-warning: #fff2cc;
+$danger: #7c2a35;
+$light-danger: #fdd5db;
+
+/* end Colores */
+
+$font-georgia: 'Georgia', 'serif';
+$font-SuecaSlab: 'SuecaSlab', 'Georgia', 'serif';
+$font-arial: 'Arial', 'sans-serif';
+$font-icons: 'LNicons';
+//espacio de interletrado
+$letter-spacing: -0.4px;
+//pixel
+$em: 0.0625em; //1px
+$rem: 0.0625rem; //1px
+//ems
+$px-1: $rem * 1;
+$px-2: $rem * 2;
+$px-3: $rem * 3;
+$px-4: $rem * 4;
+$px-5: $rem * 5;
+$px-6: $rem * 6;
+$px-7: $rem * 7;
+$px-8: $rem * 8;
+$px-9: $rem * 9;
+$px-10: $rem * 10;
+$px-11: $rem * 11;
+$px-12: $rem * 12;
+$px-13: $rem * 13;
+$px-14: $rem * 14;
+$px-15: $rem * 15;
+$px-16: $rem * 16;
+$px-17: $rem * 17;
+$px-18: $rem * 18;
+$px-19: $rem * 19;
+$px-20: $rem * 20;
+$px-21: $rem * 21;
+$px-22: $rem * 22;
+$px-23: $rem * 23;
+$px-24: $rem * 24;
+$px-25: $rem * 25;
+$px-26: $rem * 26;
+$px-27: $rem * 27;
+$px-28: $rem * 28;
+$px-29: $rem * 29;
+$px-30: $rem * 30;
+$px-31: $rem * 31;
+$px-32: $rem * 32;
+$px-33: $rem * 33;
+$px-34: $rem * 34;
+$px-35: $rem * 35;
+$px-36: $rem * 36;
+$px-37: $rem * 37;
+$px-38: $rem * 38;
+$px-39: $rem * 39;
+$px-40: $rem * 40;
+$px-41: $rem * 41;
+$px-42: $rem * 42;
+$px-43: $rem * 43;
+$px-44: $rem * 44;
+$px-45: $rem * 45;
+$px-46: $rem * 46;
+$px-47: $rem * 47;
+$px-48: $rem * 48;
+$px-49: $rem * 49;
+$px-50: $rem * 50;
+$px-51: $rem * 51;
+$px-52: $rem * 52;
+$px-53: $rem * 53;
+$px-54: $rem * 54;
+$px-55: $rem * 55;
+$px-56: $rem * 56;
+$px-57: $rem * 57;
+$px-58: $rem * 58;
+$px-59: $rem * 59;
+$px-60: $rem * 60;
+$px-61: $rem * 61;
+$px-62: $rem * 62;
+$px-63: $rem * 63;
+$px-64: $rem * 64;
+$px-65: $rem * 65;
+$px-66: $rem * 66;
+$px-67: $rem * 67;
+$px-68: $rem * 68;
+$px-69: $rem * 69;
+$px-70: $rem * 70;
+$px-71: $rem * 71;
+$px-72: $rem * 72;
+$px-73: $rem * 73;
+$px-74: $rem * 74;
+$px-75: $rem * 75;
+$px-76: $rem * 76;
+$px-77: $rem * 77;
+$px-78: $rem * 78;
+$px-79: $rem * 79;
+$px-80: $rem * 80;
+$px-81: $rem * 81;
+$px-82: $rem * 82;
+$px-83: $rem * 83;
+$px-84: $rem * 84;
+$px-85: $rem * 85;
+$px-86: $rem * 86;
+$px-87: $rem * 87;
+$px-88: $rem * 88;
+$px-89: $rem * 89;
+$px-90: $rem * 90;
+$px-91: $rem * 91;
+$px-92: $rem * 92;
+$px-93: $rem * 93;
+$px-94: $rem * 94;
+$px-95: $rem * 95;
+$px-96: $rem * 96;
+$px-97: $rem * 97;
+$px-98: $rem * 98;
+$px-99: $rem * 99;
+$px-100: $rem * 100;
+$px-300: $rem * 300;
+//rems
+$font-1: $rem * 1;
+$font-2: $rem * 2;
+$font-3: $rem * 3;
+$font-4: $rem * 4;
+$font-5: $rem * 5;
+$font-6: $rem * 6;
+$font-7: $rem * 7;
+$font-8: $rem * 8;
+$font-9: $rem * 9;
+$font-10: $rem * 10;
+$font-11: $rem * 11;
+$font-12: $rem * 12;
+$font-13: $rem * 13;
+$font-14: $rem * 14;
+$font-15: $rem * 15;
+$font-16: $rem * 16;
+$font-17: $rem * 17;
+$font-18: $rem * 18;
+$font-19: $rem * 19;
+$font-20: $rem * 20;
+$font-21: $rem * 21;
+$font-22: $rem * 22;
+$font-23: $rem * 23;
+$font-24: $rem * 24;
+$font-25: $rem * 25;
+$font-26: $rem * 26;
+$font-27: $rem * 27;
+$font-28: $rem * 28;
+$font-29: $rem * 29;
+$font-30: $rem * 30;
+$font-31: $rem * 31;
+$font-32: $rem * 32;
+$font-33: $rem * 33;
+$font-34: $rem * 34;
+$font-35: $rem * 35;
+$font-36: $rem * 36;
+$font-37: $rem * 37;
+$font-38: $rem * 38;
+$font-39: $rem * 39;
+$font-40: $rem * 40;
+$font-41: $rem * 41;
+$font-42: $rem * 42;
+$font-43: $rem * 43;
+$font-44: $rem * 44;
+$font-45: $rem * 45;
+$font-46: $rem * 46;
+$font-47: $rem * 47;
+$font-48: $rem * 48;
+$font-49: $rem * 49;
+$font-50: $rem * 50;
+$font-51: $rem * 51;
+$font-52: $rem * 52;
+$font-53: $rem * 53;
+$font-54: $rem * 54;
+$font-55: $rem * 55;
+$font-56: $rem * 56;
+$font-57: $rem * 57;
+$font-58: $rem * 58;
+$font-59: $rem * 59;
+$font-60: $rem * 60;
+$font-61: $rem * 61;
+$font-62: $rem * 62;
+$font-63: $rem * 63;
+$font-64: $rem * 64;
+$font-65: $rem * 65;
+$font-66: $rem * 66;
+$font-67: $rem * 67;
+$font-68: $rem * 68;
+$font-69: $rem * 69;
+$font-70: $rem * 70;
+$font-71: $rem * 71;
+$font-72: $rem * 72;
+$font-73: $rem * 73;
+$font-74: $rem * 74;
+$font-75: $rem * 75;
+$font-76: $rem * 76;
+$font-77: $rem * 77;
+$font-78: $rem * 78;
+$font-79: $rem * 79;
+$font-80: $rem * 80;
+$font-81: $rem * 81;
+$font-82: $rem * 82;
+$font-83: $rem * 83;
+$font-84: $rem * 84;
+$font-85: $rem * 85;
+$font-86: $rem * 86;
+$font-87: $rem * 87;
+$font-88: $rem * 88;
+$font-89: $rem * 89;
+$font-90: $rem * 90;
+$font-91: $rem * 91;
+$font-92: $rem * 92;
+$font-93: $rem * 93;
+$font-94: $rem * 94;
+$font-95: $rem * 95;
+$font-96: $rem * 96;
+$font-97: $rem * 97;
+$font-98: $rem * 98;
+$font-99: $rem * 99;
+$font-100: $rem * 100;
+//line
+$line-1: $rem * 8;
+$line-2: $rem * 9;
+$line-3: $rem * 10;
+$line-4: $rem * 11;
+$line-5: $rem * 12;
+$line-6: $rem * 13;
+$line-7: $rem * 14;
+$line-8: $rem * 15;
+$line-9: $rem * 16;
+$line-10: $rem * 17;
+$line-11: $rem * 18;
+$line-12: $rem * 19;
+$line-13: $rem * 20;
+$line-14: $rem * 21;
+$line-15: $rem * 22;
+$line-16: $rem * 23;
+$line-17: $rem * 24;
+$line-18: $rem * 25;
+$line-19: $rem * 26;
+$line-20: $rem * 27;
+$line-21: $rem * 28;
+$line-22: $rem * 29;
+$line-23: $rem * 30;
+$line-24: $rem * 31;
+$line-25: $rem * 32;
+$line-26: $rem * 33;
+$line-27: $rem * 34;
+$line-28: $rem * 35;
+$line-29: $rem * 36;
+$line-30: $rem * 37;
+$line-31: $rem * 38;
+$line-32: $rem * 39;
+$line-33: $rem * 40;
+$line-34: $rem * 41;
+$line-35: $rem * 42;
+$line-36: $rem * 43;
+$line-37: $rem * 44;
+$line-38: $rem * 45;
+$line-39: $rem * 46;
+$line-40: $rem * 47;
+$line-41: $rem * 48;
+$line-42: $rem * 49;
+$line-43: $rem * 50;
+$line-44: $rem * 51;
+$line-45: $rem * 52;
+$line-46: $rem * 53;
+$line-47: $rem * 54;
+$line-48: $rem * 55;
+$line-49: $rem * 56;
+$line-50: $rem * 57;
+$line-51: $rem * 58;
+$line-52: $rem * 59;
+$line-53: $rem * 60;
+$line-54: $rem * 61;
+$line-55: $rem * 62;
+$line-56: $rem * 63;
+$line-57: $rem * 64;
+$line-58: $rem * 65;
+$line-59: $rem * 66;
+$line-60: $rem * 67;
+$line-61: $rem * 68;
+$line-62: $rem * 69;
+$line-63: $rem * 70;
+$line-64: $rem * 71;
+$line-65: $rem * 72;
+$line-66: $rem * 73;
+$line-67: $rem * 74;
+$line-68: $rem * 75;
+$line-69: $rem * 76;
+$line-70: $rem * 77;
+$line-71: $rem * 78;
+$line-72: $rem * 79;
+$line-73: $rem * 80;
+$line-74: $rem * 81;
+$line-75: $rem * 82;
+$line-76: $rem * 83;
+$line-77: $rem * 84;
+$line-78: $rem * 85;
+$line-79: $rem * 86;
+$line-80: $rem * 87;
+$line-81: $rem * 88;
+$line-82: $rem * 89;
+$line-83: $rem * 90;
+$line-84: $rem * 91;
+$line-85: $rem * 92;
+$line-86: $rem * 93;
+$line-87: $rem * 94;
+$line-88: $rem * 95;
+$line-89: $rem * 96;
+$line-90: $rem * 97;
+$line-91: $rem * 98;
+$line-92: $rem * 99;
+$line-93: $rem * 100;
+$line-94: $rem * 101;
+$line-95: $rem * 102;
+$line-96: $rem * 103;
+$line-97: $rem * 104;
+$line-98: $rem * 105;
+$line-99: $rem * 106;
+$line-100: $rem * 107;
+//=======================================
+// Media Querys
+//=======================================
+$media-xs: 'min-width : 20em'; // 320px
+$media-s: 'min-width : 22em'; // 360px
+$media-m: 'min-width: 48em'; // 768px
+$media-l: 'min-width: 64em'; // 1024px
+$media-lm: 'min-width: 68.75em'; // 1100px
+$media-lg: 'min-width: 80em'; // 1280px
+$media-xl: 'min-width: 83.75em'; // 1340px
+//=======================================
+// Calles entre columnas
+//=======================================
+$gap-l: 0 $px-20;
+$gap-m: 0 $px-15;
+$gap-xs: 0 $px-10;
+//=======================================
+// Aspect ratio
+//=======================================
+$picture: calc((2 / 3) * 100%);
+$square: calc((3 / 4) * 100%);
+$video: calc((9 / 16) * 100%);
+$cinema: calc((9 / 21) * 100%);
+$vertical-square: calc((13 / 12.19) * 100%);
+$vertical-video: calc((13 / 8.19) * 100%);
+
+$logo-ohlala: '\e80d';
+$logo-brando: '\e800';
+$logo-lugares: '\e80b'; /*falta*/
+$logo-living: '\e807';
+$logo-hola: '\e803';
+$logo-jardin: '\e805';
+$logo-rolling: '\e80e';
+
+$spacing: 8px;
+$spacing-2xs: $spacing / 2;
+$spacing-xs: $spacing * 1;
+$spacing-sm: $spacing * 2;
+$spacing-md: $spacing * 3;
+$spacing-lg: $spacing * 4;
+$spacing-xl: $spacing * 5;
+$spacing-2xl: $spacing * 8;
+$spacing-3xl: $spacing * 10;
+
+@function px($base, $exponent: 1) {
+    // px(16)
+    $result: 0.0625;
+    @for $_ from 1 through $exponent {
+        $result: $result * $base;
+    }
+    @return #{$result}rem;
+}

@@ -1,0 +1,18 @@
+@import '../abstracts/variables';
+
+.com-tip {
+    font: normal 19px/30px $font-georgia;
+    padding-top: $px-30;
+    margin-top: $px-15;
+    padding-bottom: $px-30;
+    border-top: 1px solid $gris3;
+    border-bottom: 1px solid $gris3;
+    margin-bottom: $px-30;
+    dt,
+    dd {
+        display: inline;
+    }
+    dt {
+        font-weight: 600;
+    }
+}

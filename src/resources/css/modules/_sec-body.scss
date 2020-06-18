@@ -1,0 +1,25 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.sec-body {
+    .footer & {
+        margin-bottom: px(20);
+        display: none;
+
+        .amp & {
+            display: none;
+        }
+    }
+}
+@media ($media-l) {
+    .sec-body {
+        .footer & {
+            display: flex;
+
+            .amp & {
+                border-top: 1px solid $gris3;
+                padding-top: px(24);
+                display: flex;
+            }
+        }
+    }
+}

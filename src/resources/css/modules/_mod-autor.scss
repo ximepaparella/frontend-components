@@ -1,0 +1,65 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+@import '../abstracts/spacing';
+
+.mod-autor {
+    margin-bottom: $spacing-lg;
+    @include flex(inline);
+    .container-text {
+        @include flex(flex, column, center, center);
+        .container-firma {
+            @include flex(flex);
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: $spacing-xs;
+            .--autor {
+                @media (media-m) {
+                    margin-bottom: $spacing-xs;
+                }
+                &:before {
+                    content: ',';
+                    padding-right: px(5);
+                    color: $negro;
+                }
+                &:first-child {
+                    &:before {
+                        content: none;
+                    }
+                }
+                &:last-child {
+                    &:before {
+                        content: 'y';
+                        padding: 0 px(5);
+                        color: $negro;
+                    }
+                }
+                &:first-child {
+                    &:before {
+                        .cuerpo__nota & {
+                            content: 'Por';
+                            padding-right: px(5);
+                            color: $negro;
+                        }
+                    }
+                }
+            }
+        }
+        .container-medio {
+            @include flex(flex);
+            width: 100%;
+        }
+    }
+    .container-img {
+        @include flex(inline);
+        background: $gris4;
+        width: px(80);
+        height: px(80);
+        border-radius: 50%;
+        margin-right: $spacing-sm;
+        .img {
+            width: px(80);
+            height: px(80);
+            display: block;
+        }
+    }
+}

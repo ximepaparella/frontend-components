@@ -1,0 +1,24 @@
+@import '../abstracts/variables';
+.com-espacio-patrocinado {
+    font: 400 $font-12 $font-arial;
+    line-height: $line-16;
+    color: $gris5;
+    text-transform: uppercase;
+    margin-top: $px-6;
+}
+
+.com-content-lab {
+    font: 400 $font-12 $font-arial;
+    line-height: $line-16;
+    color: $link;
+    text-transform: uppercase;
+    margin-top: $px-6;
+}
+
+.com-marquesina {
+    font: normal $font-14 $font-arial;
+    line-height: $line-17;
+    color: $negro;
+    text-transform: capitalize;
+    margin-top: $px-6;
+}

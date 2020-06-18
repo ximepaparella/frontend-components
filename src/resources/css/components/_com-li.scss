@@ -1,0 +1,39 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.com-li {
+    &.--salir {
+        border-top: 1px solid $gris2;
+    }
+    .mod-li & {
+        .footer & {
+            font-family: $font-arial;
+            font-size: px(14);
+            color: $link;
+            text-transform: initial;
+            margin: 0 px(7.5);
+        }
+    }
+    .mod-unordered & {
+        .footer & {
+            font-family: $font-arial;
+            font-size: px(14);
+            color: $link;
+            text-transform: initial;
+            margin: 0 px(7.5);
+        }
+    }
+    .mod-breadcrumb & {
+        &:first-letter {
+            text-transform: capitalize;
+        }
+    }
+}
+@media ($media-l) {
+    .com-li {
+        .mod-unordered & {
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}

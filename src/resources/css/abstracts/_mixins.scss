@@ -1,0 +1,173 @@
+@import '../abstracts/variables';
+
+@mixin font-face($name, $file, $weight) {
+    @font-face {
+        font-family: '#{$name}';
+        src: url('../../fonts/#{$file}.eot');
+        src: url('../../fonts/#{$file}.eot?#iefix') format('embedded-opentype'),
+            url('../../fonts/#{$file}.woff') format('woff'),
+            url('../../fonts/#{$file}.ttf') format('truetype'),
+            url('../../fonts/#{$file}.svg?#webfont') format('svg');
+        font-weight: $weight;
+        font-style: normal;
+    }
+}
+
+/* COLUMNAS */
+
+@mixin columns($name, $start, $end) {
+    @for $i from $start through $end {
+        .col-#{$name}#{$i} {
+            -ms-flex: 0 0 $col-width * $i * 1%;
+            flex: 0 0 $col-width * $i * 1%;
+            max-width: $col-width * $i * 1%;
+        }
+    }
+}
+
+/* ORDERS */
+
+@mixin orders($name, $start, $end) {
+    @for $i from $start through $end {
+        .order-#{$name}#{$i} {
+            -ms-flex-order: $i;
+            order: $i;
+        }
+    }
+}
+
+/* OFFSETS */
+
+@mixin offsets($name, $start, $end) {
+    @for $i from $start through $end {
+        .offset-#{$name}#{$i} {
+            margin-left: $col-width * $i * 1%;
+        }
+    }
+}
+
+/* REVISTAS */
+
+@mixin revista($logo, $primario) {
+    &.acu-revista .subheader-acu i.logo-revista:before {
+        content: $logo;
+    }
+    .cont-figure .figure .content-pic:before {
+        content: $logo;
+        color: $primario;
+        opacity: 0.2;
+        font-size: $font-35;
+    }
+    @media (min-width: 1023px) {
+        .row-gap-deskxl-2 .cont-figure .figure .content-pic:before {
+            font-size: $font-65;
+        }
+    }
+    .com-tag a {
+        color: $primario;
+        border-color: $primario;
+        &:hover {
+            background: $primario;
+        }
+    }
+    .com-secondary-tag a,
+    .com-secondary-tag a:after,
+    [class^='logo-']:not(.logo-la-nacion),
+    [class*=' logo-'] {
+        color: $primario;
+    }
+    &.fondo-revista,
+    .mod-newsletter,
+    .mod-opening:before {
+        background-color: $primario;
+    }
+    .subheader-acu {
+        background: $primario;
+    }
+}
+
+@mixin headerBlanco {
+    background: $blanco;
+    border-bottom: 1px solid $gris2;
+    .logo-la-nacion {
+        color: $ln;
+    }
+    .--btn.--secondary {
+        background-color: $blanco;
+        border: 1px solid $link;
+        color: $link;
+    }
+    .com-hamburger:before {
+        color: $negro;
+    }
+}
+@mixin flex($display, $direction: null, $ejeX: null, $ejeY: null) {
+    //Sólo agregamos el "@include flex($display, $direction, $ejeX, $ejeY);"
+    @if $display == flex {
+        $display: flex;
+    } @else if $display == inline {
+        $display: inline-flex;
+    }
+    @if $ejeX == start {
+        $ejeX: flex-start;
+    } @else if $ejeX == end {
+        $ejeX: flex-end;
+    } @else if $ejeX == center {
+        $ejeX: center;
+    } @else if $ejeX == between {
+        $ejeX: space-between;
+    } @else if $ejeX == around {
+        $ejeX: space-around;
+    }
+    @if $ejeY == start {
+        $ejeY: flex-start;
+    } @else if $ejeY == end {
+        $ejeY: flex-end;
+    } @else if $ejeY == center {
+        $ejeY: center;
+    } @else if $ejeY == stretch {
+        $ejeY: stretch;
+    } @else if $ejeY == baseline {
+        $ejeY: baseline;
+    }
+
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $ejeX;
+    align-items: $ejeY;
+}
+
+@mixin transform($eje, $valor) {
+    //Sólo agregamos el "@include transform($eje, $valor);"
+    $num: '(#{$valor})';
+    -webkit-transform: translate#{$eje}#{$num};
+    -moz-transform: translate#{$eje}#{$num};
+    -ms-transform: translate#{$eje}#{$num};
+    transform: translate#{$eje}#{$num};
+}
+
+@mixin gap($valor) {
+    @if $valor == sec {
+        $gap: $px-20;
+        margin-bottom: $gap;
+        @media ($media-m) {
+            $gap: $px-30;
+            margin-bottom: $gap;
+        }
+        @media ($media-l) {
+            $gap: $px-40;
+            margin-bottom: $gap;
+        }
+    } @else if $valor == mod {
+        $gap: $px-10;
+        margin-bottom: $gap;
+        @media ($media-m) {
+            $gap: $px-20;
+            margin-bottom: $gap;
+        }
+        @media ($media-l) {
+            $gap: $px-30;
+            margin-bottom: $gap;
+        }
+    }
+}

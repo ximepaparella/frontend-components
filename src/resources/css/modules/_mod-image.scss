@@ -1,0 +1,8 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.mod-image {
+    display: flex;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}

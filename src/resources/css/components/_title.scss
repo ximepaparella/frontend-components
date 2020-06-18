@@ -1,0 +1,217 @@
+@import '../abstracts/variables';
+
+/* titles section */
+
+.com-title-section-xl {
+    font-family: $font-SuecaSlab;
+    font-size: $font-22;
+    font-weight: 500;
+    line-height: $line-26;
+    letter-spacing: -0.35px;
+    text-decoration: underline;
+}
+
+.com-title-section-l {
+    font-family: $font-SuecaSlab;
+    font-size: $font-22;
+    font-weight: 500;
+    line-height: $line-22;
+    letter-spacing: -0.35px;
+}
+
+.com-title-section-m {
+    font-family: $font-SuecaSlab;
+    font-size: $font-22;
+    font-weight: 800;
+    line-height: $line-22;
+    letter-spacing: -0.29px;
+    .com-ranking & {
+        margin-bottom: $px-13;
+    }
+}
+
+h4.com-title-section-m {
+    margin-bottom: $px-20;
+}
+
+.com-title-section-s {
+    font-family: $font-SuecaSlab;
+    font-size: $font-22;
+    font-weight: 500;
+    line-height: $line-22;
+    letter-spacing: -0.29px;
+}
+
+h4.com-title-section-s {
+    margin-bottom: $px-20;
+}
+
+.com-title-section-xs {
+    font-family: $font-arial;
+    font-size: $font-16;
+    font-weight: 700;
+    line-height: $line-16;
+    letter-spacing: -0.21px;
+}
+
+.com-title-nota {
+    font-family: $font-SuecaSlab;
+    font-size: $font-24;
+    line-height: $line-33;
+}
+
+h1.com-title-nota {
+    margin-bottom: $px-20;
+    //Valores de tablet para arriba
+    @media (min-width: 768px) {
+        margin-bottom: $px-16;
+    }
+}
+
+.com-title-acu {
+    font-family: $font-arial;
+    font-size: $font-14;
+    line-height: $line-17;
+    color: $negro;
+    margin-top: $px-7;
+    b {
+        font-weight: 600;
+    }
+}
+
+.com-title-acu-humor {
+    font-family: $font-SuecaSlab;
+    font-size: $font-16;
+    font-weight: 800;
+    line-height: $line-16;
+    letter-spacing: -0.4px;
+    margin-right: $px-20;
+    .humor & {
+        display: inline-block;
+        margin-top: 0;
+    }
+}
+
+.com-title-acu-last {
+    font-family: $font-SuecaSlab;
+    font-size: $font-20;
+    line-height: $line-24;
+    letter-spacing: -0.47px;
+}
+
+.com-titleWithfollow {
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+        margin-bottom: $px-30;
+    }
+    @media (min-width: 1024px) {
+        margin-bottom: $px-40;
+    }
+    [class^='com-title'],
+    [class*=' com-title'] {
+        display: inline-block;
+        margin-right: $px-10;
+        vertical-align: middle;
+        margin-bottom: $px-10;
+    }
+}
+
+.com-title-section-autor {
+    font-family: $font-SuecaSlab;
+    font-size: $font-20;
+    font-weight: 600;
+    line-height: $line-20;
+    letter-spacing: -0.47px;
+}
+
+//Valores de tablet para arriba
+@media (min-width: 360px) {
+    .com-title-acu {
+        font-family: $font-SuecaSlab;
+        font-size: $font-17;
+        line-height: $line-21;
+    }
+}
+
+//Valores de tablet para arriba
+@media (min-width: 768px) {
+    .com-title-acu {
+        font-family: $font-SuecaSlab;
+        font-size: $font-17;
+        line-height: $line-17;
+        letter-spacing: -0.4px;
+    }
+    .com-title-nota {
+        font-size: $font-38;
+        line-height: $line-48;
+    }
+    .com-title-acu-last {
+        font-family: $font-SuecaSlab;
+        font-size: $font-19;
+        line-height: $line-24;
+        letter-spacing: -0.45px;
+    }
+}
+
+//Valores de desk chico para arriba
+@media (min-width: 1024px) {
+    .com-title-section-xxl {
+        font-family: $font-SuecaSlab;
+        font-size: $font-40;
+        font-weight: 500;
+        line-height: $line-40;
+        letter-spacing: -0.53px;
+    }
+    .com-title-section-xl {
+        font-family: $font-SuecaSlab;
+        font-size: $font-30;
+        font-weight: 500;
+        line-height: $line-40;
+        letter-spacing: -0.4px;
+    }
+    .com-title-section-l {
+        font-family: $font-SuecaSlab;
+        font-size: $font-25;
+        font-weight: 500;
+        line-height: $line-40;
+        letter-spacing: -0.4px;
+    }
+    .com-title-section-m {
+        font-family: $font-SuecaSlab;
+        font-size: $font-24;
+        font-weight: 800;
+        line-height: $line-24;
+        letter-spacing: -0.32px;
+    }
+    .com-title-section-s {
+        font-family: $font-SuecaSlab;
+        font-size: $font-24;
+        font-weight: 500;
+        line-height: $line-24;
+        letter-spacing: -0.32px;
+    }
+    .com-title-acu {
+        font-size: $font-14;
+        line-height: $line-15;
+        letter-spacing: -0.6px;
+    }
+}
+
+//Valores de tamaño para 3 cajas con borde y padding + tercera
+@media (min-width: 1100px) {
+    .com-title-acu {
+        font-size: $font-17;
+        line-height: $line-17;
+        letter-spacing: -0.4px;
+    }
+}
+
+//Valores de desk para arriba
+@media (min-width: 1340px) {
+    .com-title-nota {
+        font-size: $font-43;
+        line-height: $line-52;
+    }
+}
+
+/* end titles section */

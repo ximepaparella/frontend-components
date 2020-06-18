@@ -1,0 +1,273 @@
+@import '../abstracts/variables';
+//=====================
+// HEADER Desktop CORE
+//=====================
+.header {
+    /*display: none;*/
+    position: relative;
+    border-bottom: 1px solid $gris1;
+    padding: $px-13 0;
+    background: $blanco;
+    width: 100%;
+    z-index: 98;
+    transition: top 0.2s ease-in-out;
+
+    &__left {
+        display: none;
+    }
+
+    &__middle {
+        &.col-4 {
+            -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
+            max-width: 66.66667%;
+            display: flex;
+            //aca logo lanacion
+        }
+    }
+
+    &__right {
+        .--btn {
+            &.--highlight {
+                background: none;
+                border: none;
+                color: $link;
+                padding: $px-2 0;
+                font-weight: 400;
+            }
+
+            &.--secondary {
+                display: none;
+            }
+        }
+
+        #menuUser {
+            display: none;
+        }
+    }
+
+    //active modo DARK-------
+    &.--dark,
+    .acu-revista &,
+    .revistas-layer:not(.--scrollUp) &,
+    .storytelling:not(.--scrollUp) &,
+    &.transparente,
+    .--hlp-transparent & {
+        &:not(.--scrollUp) {
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+
+            .header__left {
+                .com-hamburger {
+                    &:before,
+                    .icon-menu {
+                        color: $blanco;
+                    }
+                }
+
+                .com-search {
+                    &__input {
+                        color: $blanco;
+
+                        &::placeholder {
+                            color: $gris3;
+                        }
+                    }
+
+                    &__submit {
+                        background: $blanco;
+                        color: $link;
+                    }
+
+                    .icon-search {
+                        color: $blanco;
+                    }
+                }
+            }
+
+            .header__middle {
+                .logo-la-nacion {
+                    color: $blanco;
+                }
+            }
+
+            .header__right {
+                .com-usuario {
+                    &__name {
+                        color: $blanco;
+
+                        &:before {
+                            border-top: 2px solid $blanco;
+                            border-left: 2px solid $blanco;
+                        }
+                    }
+
+                    &__valueSuscrib {
+                        color: $gris3;
+                    }
+                }
+
+                .--btn {
+                    &.--highlight {
+                        border-color: $highlight;
+                        color: $blanco;
+
+                        @media ($media-l) {
+                            color: $negro;
+                        }
+
+                        &:hover {
+                            border-color: $negro;
+                            color: $blanco;
+                        }
+                    }
+
+                    &.--secondary {
+                        background-color: transparent;
+                        border-color: $blanco;
+                        color: $blanco;
+
+                        &:hover {
+                            background-color: $blanco;
+                            color: $negro;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 769px) {
+        &__left {
+            display: block;
+            padding-top: $px-5;
+
+            .com-search {
+                display: none;
+            }
+        }
+
+        &__middle {
+            &.col-4 {
+                -ms-flex: 0 0 33.33333%;
+                flex: 0 0 33.33333%;
+                max-width: 33.33333%;
+                //aca logo lanacion
+            }
+        }
+
+        &__right {
+            padding-top: $px-5;
+
+            .--btn.--highlight {
+                margin: 0 10px;
+            }
+        }
+    }
+
+    @media ($media-l) {
+        height: $px-65;
+        border-bottom: 1px solid $gris2;
+
+        &__left {
+            padding-top: 0;
+            display: grid;
+            grid-template-columns: $px-100 + $px-10 1fr;
+            align-items: center;
+
+            .com-search {
+                display: block;
+            }
+        }
+        &__middle {
+            &.col-4 {
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                //aca logo lanacion
+            }
+        }
+
+        &__right {
+            padding-top: 0;
+            margin-left: auto;
+            text-align: right;
+
+            .--btn {
+                &.--highlight {
+                    margin-right: $px-35;
+                    background-color: $highlight;
+                    border: 1px solid $gris3;
+                    color: $negro;
+                    padding: $px-11 $px-24;
+                    font-weight: 700;
+                }
+
+                &.--secondary {
+                    display: block;
+                }
+            }
+
+            #menuUser {
+                display: block;
+            }
+        }
+
+        //=================================
+        // ------ESTADOS DEL HEADER------
+        //=================================
+        //scrollUp
+        &.--scrollDown,
+        .--scrollDown & {
+            /*transform: translateY(-100%);
+            position: absolute;*/
+            position: fixed;
+            top: -80px;
+        }
+        //scrollDown
+        &.--scrollUp,
+        .--scrollUp & {
+            /*transform: translateY(0);*/
+            top: 0;
+            position: fixed;
+        }
+        .dropdown.--scrollUp & {
+            padding-right: $scroll-width;
+        }
+        //active del search-----
+        &.--active-search {
+            .header__left {
+                flex-basis: 60%;
+                max-width: 60%;
+
+                .com-search {
+                    &__submit {
+                        display: inline-block;
+                    }
+
+                    &__input {
+                        width: 75%;
+                    }
+
+                    .icon-search {
+                        display: none;
+                    }
+                }
+            }
+
+            .header__middle {
+                display: none;
+            }
+        }
+
+        .storytelling:not(.--scrollUp) & {
+            position: absolute;
+        }
+    }
+
+    @media ($media-lm) {
+        &__left {
+            grid-template-columns: $px-100 + $px-20 1fr;
+        }
+    }
+}

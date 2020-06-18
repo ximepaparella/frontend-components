@@ -1,0 +1,45 @@
+// @import '../abstracts/variables';
+// .com-breadcrumb {
+//     margin-top: $px-30;
+//     font-family: $font-arial;
+//     font-size: $font-14;
+//     display: none;
+//     flex-direction: row;
+//     align-items: center;
+//     margin-bottom: $px-24;
+//     color: $gris5;
+//     a {
+//         color: $link;
+//         border-left: solid 1px $gris5;
+//         padding: 0 $px-9;
+//         &:first-letter {
+//             text-transform: capitalize;
+//         }
+//         &:last-child {
+//             /*border-right: none;
+//             pointer-events: none;
+//             cursor: default;
+//             color: $gris5;*/
+//         }
+//         &:first-child {
+//             padding-left: 0;
+//             border-left: 0;
+//             color: $link;
+//         }
+//     }
+//     span {
+//         border-left: solid 1px $gris5;
+//         padding: 0 $px-6;
+//     }
+//     p {
+//         border-left: solid 1px $gris5;
+//         padding: 0 $px-6;
+//     }
+// }
+
+// //Valores de tablet para arriba
+// @media (min-width: 768px) {
+//     .com-breadcrumb {
+//         display: flex;
+//     }
+// }

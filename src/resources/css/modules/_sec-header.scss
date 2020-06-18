@@ -1,0 +1,7 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.sec-header {
+    .footer & {
+        margin-bottom: px(16);
+    }
+}

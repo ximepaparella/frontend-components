@@ -1,0 +1,10 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.mod-user {
+    @include flex(flex, row, end, center);
+}
+@media ($media-l) {
+    .mod-user {
+        justify-content: center;
+    }
+}

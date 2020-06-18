@@ -1,0 +1,145 @@
+@import '../abstracts/variables';
+
+/* share Sociales */
+
+.com-share {
+    position: fixed;
+    z-index: 10;
+    top: -50px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: $blanco;
+    border: 1px solid $gris1;
+    overflow: hidden;
+    transition: all 0.25s;
+    @media (min-width: 768px) {
+        display: block;
+    }
+
+    //scrollDown Se esconde fuera de la pantalla
+    &.--scrollDown {
+        transform: translateY(-100%);
+    }
+    //scrollUp Se muestra en la posición 0 (Sacar la clase cuando vuelva al punto 0)
+    &.--scrollUp {
+        transform: translateY(0);
+        display: block;
+        top: 0;
+    }
+    // Se muestra en la page Humor
+    .humor & {
+        border: 0;
+        display: inline-block;
+        width: auto;
+        float: none;
+        position: relative;
+        vertical-align: bottom;
+        > .share-right button:first-child {
+            border-top: 0;
+            padding-top: 0;
+        }
+        button {
+            display: inline-block;
+            margin: 0 $px-15 0 0;
+            height: $px-25;
+            width: $px-25;
+            &.icon-comment {
+                display: none;
+            }
+        }
+        label {
+            display: none;
+        }
+    }
+    div {
+        display: inline-block;
+    }
+    .share-right {
+        float: right;
+        button {
+            margin-right: 0;
+        }
+    }
+    button {
+        display: inline-block;
+        background: initial;
+        border: 0;
+        font-size: $font-28;
+        padding: $px-10;
+        &.icon-comment {
+            display: none;
+            & + label {
+                display: none;
+            }
+        }
+        .humor & {
+            margin-right: $px-15;
+        }
+    }
+    label {
+        display: inline-block;
+        font-family: $font-arial;
+        font-size: $font-11;
+        line-height: $line-14;
+        vertical-align: super;
+        color: $link;
+        margin-right: $px-10;
+    }
+}
+@media (min-width: 1020px) and (max-width: 1025px) and (orientation: landscape) {
+    /* For landscape layouts only */
+    .col-1 .com-share {
+        display: none;
+    }
+}
+
+//Valores de desk chico para arriba
+@media (min-width: 1024px) {
+    .com-share {
+        position: sticky;
+        top: 40%;
+        top: $px-10;
+        left: 0;
+        background: initial;
+        border: 0;
+        float: left;
+
+        &.--scrollUp {
+            top: $px-80;
+        }
+        .share-right {
+            float: initial;
+            margin-right: initial;
+            border-top: 1px solid $negro;
+            button {
+                &:first-child {
+                    margin: $px-10 0 0 0;
+                }
+            }
+        }
+        label {
+            margin-left: initial;
+        }
+        button {
+            display: block;
+            background: initial;
+            border: 0;
+            font-size: $font-30;
+            padding: $px-10;
+            margin-bottom: $px-5;
+            opacity: 0.8;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                color: $link;
+            }
+            &.icon-comment {
+                display: none;
+                label {
+                    display: none;
+                }
+            }
+        }
+    }
+}

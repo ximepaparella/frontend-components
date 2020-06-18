@@ -1,0 +1,112 @@
+@import '../abstracts/variables';
+
+.--bg-banner {
+    display: flex;
+    background-color: #f7f7f7;
+    justify-content: center;
+    align-items: center;
+    .col-deskxl-10 & {
+        margin-bottom: $px-24;
+    }
+    .amp & {
+        margin-bottom: $px-20;
+        transform: scaleX(1.15);
+        margin-left: inherit;
+        @media ($media-m) {
+            transform: inherit;
+        }
+    }
+    &.--sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        background: rgba(204, 204, 204, 0.2);
+        background-color: #f3f3f3;
+        z-index: 130;
+        top: 0;
+        display: none;
+
+        .--scrollUp & {
+            display: none;
+        }
+
+        &.--active {
+            .--scrollDown & {
+                display: flex;
+            }
+        }
+    }
+    .banner {
+        margin: 0;
+        &.--sticky {
+            position: fixed;
+            margin: 0;
+            left: 0;
+            right: 0;
+            top: -100px;
+            z-index: 10000;
+            transition: all 0.25s;
+            background-color: #f3f3f3;
+
+            &.--active {
+                #wrapper.--scrollDown & {
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+.row.sticky-amp {
+    position: fixed;
+    bottom: 55px;
+    left: 0;
+    .--bg-banner {
+        margin-bottom: 0;
+    }
+    @media ($media-m) {
+        bottom: 0;
+    }
+}
+
+@media ($media-l) {
+    .--bg-banner {
+        &.--sticky {
+            .--scrollUp & {
+                display: flex;
+                top: 65px;
+            }
+        }
+    }
+    .banner {
+        &#caja2_dsk {
+            margin-top: $px-40;
+            margin-bottom: $px-40;
+        }
+        &.--desktop {
+            //background-color: #f7f7f7;
+            text-align: center;
+            margin-bottom: 0;
+            .sidebar__aside & {
+                margin-bottom: $px-30;
+            }
+        }
+        &.--background {
+            background-color: #f7f7f7;
+        }
+        &.--sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: $px-10;
+
+            .sidebar__aside & {
+                position: -webkit-sticky;
+                position: sticky;
+                top: $px-10;
+            }
+
+            .--scrollUp & {
+                top: $px-80;
+            }
+        }
+    }
+}

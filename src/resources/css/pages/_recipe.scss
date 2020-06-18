@@ -1,0 +1,123 @@
+@import '../abstracts/variables';
+
+.aper-receta {
+    background: $gris1;
+    margin-bottom: $px-40;
+    &.sin-foto {
+        .cont-figure .content-pic {
+            background: $blanco;
+        }
+        .cont-aper {
+            .tags {
+                border-bottom: 0;
+                margin-right: $px-50;
+                border-right: solid 1px $gris3;
+                > div:last-of-type {
+                    margin-top: $px-20;
+                }
+                &:before {
+                    bottom: initial;
+                    height: $px-30;
+                    width: $px-1;
+                    right: -1px;
+                }
+            }
+        }
+    }
+    @media ($media-l) {
+        margin-bottom: $px-80;
+    }
+    @media ($media-m) {
+        margin-bottom: $px-40;
+    }
+
+    .cont-figure {
+        @media ($media-l) {
+            order: 2;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .cont-aper {
+        padding: $px-20;
+        padding-bottom: 0;
+        @media ($media-l) {
+            order: 1;
+        }
+        .tags {
+            border-bottom: solid 1px $gris3;
+            padding-bottom: $px-20;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                height: $px-1;
+                width: $px-30;
+                background: $negro;
+                bottom: -$px-1;
+            }
+        }
+        .cont_tags {
+            margin-bottom: $px-20;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            & + .com-subtitle_list {
+                font-size: $font-14;
+                margin-bottom: $px-12;
+            }
+            i:before {
+                text-indent: -8px;
+                display: inline-block;
+            }
+            .icon-time {
+                font-size: 2.3em;
+                @media (min-width: 768px) {
+                    font-size: 2.8em;
+                }
+            }
+            .icon-portion {
+                font-size: 2.3em;
+                @media (min-width: 768px) {
+                    font-size: 2.8em;
+                }
+            }
+        }
+    }
+}
+
+.ingredient-list {
+    list-style: disc;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .com-item {
+        margin: 0 0.8em;
+        line-height: 1.5em;
+    }
+}
+
+.time-number,
+.portion-number {
+    display: flex;
+    align-items: center;
+    font-family: arial;
+    font-size: $font-16;
+    .num {
+        margin: 0 0.2em 0 0.4em;
+    }
+}
+
+@media (min-width: 768px) {
+    .aper-receta .cont-aper {
+        padding: $px-30;
+    }
+}
+
+@media (min-width: 1024px) {
+    .aper-receta .cont-aper .cont_tags .time-number,
+    .aper-receta .cont-aper .cont_tags .portion-number {
+        padding-left: $px-15;
+    }
+}

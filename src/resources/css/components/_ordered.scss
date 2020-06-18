@@ -1,0 +1,55 @@
+@import '../abstracts/variables';
+.com-title_list {
+    font-family: SuecaSlab, Georgia;
+    font-size: $font-24;
+    line-height: $line-28;
+    color: $negro;
+    &.--bold {
+        font-weight: bold;
+    }
+}
+
+.com-subtitle_list {
+    font-family: Arial;
+    font-size: $font-16;
+    line-height: $line-22;
+    font-weight: bold;
+    color: $negro;
+}
+
+.com-ordered {
+    padding-left: 0;
+    counter-reset: item;
+    width: 100%;
+    .com-item {
+        list-style-type: none;
+        padding-left: 2em;
+        margin: 1.5em 0;
+        font-family: Georgia;
+        font-size: $font-19;
+        line-height: $px-30;
+        margin-bottom: $px-25;
+        color: $negro;
+        position: relative;
+        &:first-of-type {
+            margin: 0 0 1em 0;
+        }
+        &:before {
+            content: counter(item) '';
+            counter-increment: item;
+            width: $px-26;
+            height: $px-36;
+            top: -$px-4;
+            background-color: $negro;
+            color: $blanco;
+            position: absolute;
+            left: 0;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: $font-14;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
