@@ -7,6 +7,7 @@ import NotaReceta from './pages/nota-receta';
 import NotaStorytelling from './pages/nota-storytelling';
 import Header from './modules/Header/index';
 import Footer from './modules/Footer/index';
+import AcuRevista from './pages/acu-revista';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
                 <Route exact path="/nota-noticia" component={NotaNoticia} />
                 <Route exact path="/nota-receta" component={NotaReceta} />
                 <Route exact path="/nota-storytelling" component={NotaStorytelling} />
+                <Route exact path="/acu-revista" component={AcuRevista} />
             </Switch>
       </BrowserRouter>
     <Footer />
